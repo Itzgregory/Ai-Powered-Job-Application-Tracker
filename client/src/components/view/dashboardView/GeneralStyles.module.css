@@ -1,0 +1,73 @@
+
+
+/* intro */
+.heroContainer {
+  display: grid;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  text-align: center;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.twoCardsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+/* Media query for medium screens and up */
+@media (min-width: 768px) {
+  .twoCardsContainer {
+    flex-direction: row;
+  }
+}
+
+/* TwoCardsSection */
+/* Removed duplicate heroContainer and twoCardsContainer as they have the same styles */
+
+/* CurrentStats */
+.statsContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  width: 100%;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+/* Media query for medium screens and up */
+@media (min-width: 768px) {
+  .statsContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.statCard {
+  background-color: white;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.statTitle {
+  font-size: 0.875rem;
+  color: #4b5563;
+}
+
+.statCount {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
+}

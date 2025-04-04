@@ -1,0 +1,82 @@
+
+@font-face {
+  font-family: "hollow";
+  src: url("/client/src/styles/fonts/Hollow.ttf");
+}
+
+@font-face {
+  font-family: "oswald";
+  src: url("/client/src/styles/fonts/Oswald.ttf");
+}
+
+@font-face {
+  font-family: "cabin";
+  src: url("/client/src/styles/fonts/Cabin-Regular.ttf");
+}
+
+:root {
+  --primary-color:rgb(59 130 246 / .5);
+  --secondary-color: white;
+  --background-color:  rgb(238, 238, 238);
+  --button-color: #007bff;
+  --button-color-hover: #0056b3;
+  --button-color-active: #004085;
+  --button-text: #ffffff;
+  --text-color-light: white;
+  --text-color: rgb(59, 57, 57);
+  --page-background:  #473600;
+  --hover-color: #07bff2;
+  --shadow-color: rgba(0, 0, 0, 0.4);
+  --count-cart-bg: black;
+  --border-color: rgba(255, 255, 255, 0.2);
+  --button-hover-bg: #bd3133;
+  --button-hover-text: white;
+  --font-family-hollow: 'hollow';
+  --font-family-oswald: 'oswald';
+  --font-family-cabin: 'cabin';
+}
+
+body{
+  background-color: var(--primary-color);
+}
+
+.dashboard-layout {
+  background-color: var(--background-color); 
+  color: var(--text-color); 
+}
+
+
+.global-button {
+  display: inline-block;
+  background-color: var(--button-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 0.375rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600; 
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.global-button:hover {
+  background-color: var(--button-color-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); 
+}
+
+.global-button:active {
+  background-color: var(--button-color-active);
+  transform: translateY(0);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.global-button:focus {
+  outline: 2px solid var(--button-color-hover);
+  outline-offset: 2px;
+}
+
+
