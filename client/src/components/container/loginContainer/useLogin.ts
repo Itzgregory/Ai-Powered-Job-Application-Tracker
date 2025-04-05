@@ -3,25 +3,26 @@ import { useDispatch, useSelector } from "react-redux";
 import { useRouter } from "next/navigation";
 import { loginStart, loginSuccess, loginFailure, logout } from "@/redux/slices/user/authSlice";
 import { loginUser } from "@/app/api/user/auth";
-import { RootState } from "@/redux/store/store"; 
+import { RootState } from "@/redux/store/store";
 import { LoginFormData } from "@/types/user/authType";
 import { getAuthToken, isTokenValid, setAuthToken } from "@/utils/auth/authutils";
 
 const useLogin = () => {
   const dispatch = useDispatch();
   const router = useRouter();
-  const { user, loading, error } = useSelector((state: RootState) => state.auth);
+  const { user, loading } = useSelector((state: RootState) => state.auth);
+  // const reduxState = useSelector((state: RootState) => state); 
   const [localError, setLocalError] = useState<string | null>(null);
+  const [isRedirecting, setIsRedirecting] = useState(false);
 
   const onSubmit = async (data: LoginFormData) => {
     dispatch(loginStart());
     setLocalError(null);
-  
+
     try {
       const response = await loginUser(data);
-      console.log("Login response:", response); 
-  
-      // First, explicitly set auth token
+      // console.log("[useLogin] Login response:", response);
+
       setAuthToken(
         response.id,
         response.token,
@@ -29,57 +30,58 @@ const useLogin = () => {
         response.user?.firstName || "",
         response.user?.lastName || "",
         response.user?.email || "",
-        3600000 // 1 hour expiry
+        3600000
       );
-  
-      // Update Redux state
-      dispatch(loginSuccess({ 
+
+      dispatch(loginSuccess({
         user: response.user,
         token: response.token,
         role: response.role,
-        id: response.id
+        id: response.id,
       }));
-  
-      // Store in sessionStorage for debugging
-      sessionStorage.setItem("loginRedirectPending", "true");
-      
-     // Modify the setTimeout block:
+
+      const token = getAuthToken();
+      // console.log("[useLogin] Retrieved token:", token);
+      // console.log("[useLogin] Token valid:", isTokenValid());
+      // console.log("[useLogin] LocalStorage after set:", {
+      //   activeUser: localStorage.getItem("activeUser"),
+      //   users: localStorage.getItem("users"),
+      // });
+
+      if (!token || !isTokenValid()) {
+        throw new Error("Token validation failed after setting");
+      }
+
+      setIsRedirecting(true);
       setTimeout(() => {
-        sessionStorage.setItem('lastRedirectAttempt', Date.now().toString());
-        
-        // Verify ALL auth markers
-        const authValid = [
-          getAuthToken(),
-          isTokenValid(),
-          localStorage.getItem('userId'),
-          sessionStorage.getItem('emergencyAuthBackup')
-        ].some(Boolean);
-
-        if (!authValid) {
-          sessionStorage.setItem('redirectFailure', 'true');
-          return;
-        }
-
+        // console.log("[useLogin] About to redirect to /talentdashboard");
+        // console.log("[useLogin] Final LocalStorage check:", {
+        //   activeUser: localStorage.getItem("activeUser"),
+        //   users: localStorage.getItem("users"),
+        // });
+        // console.log("[useLogin] Final Redux state:", reduxState);
         router.push("/talentdashboard");
-      }, 1000);
-    } catch (err: any) {
-      console.error("Login error:", err);
+      }, 1000); 
+    } catch (err:any) {
+      console.error("[useLogin] Login error:", err);
       const message = err.response?.data?.message || "Login failed";
       dispatch(loginFailure(message));
       setLocalError(message);
     }
   };
+
   const handleLogout = () => {
     dispatch(logout());
     router.push("/login");
   };
 
-  return { 
+  return {
     loading,
     user,
-    localError, 
+    localError,
     onSubmit,
-    handleLogout
+    handleLogout,
+    isRedirecting,
   };
 };
 

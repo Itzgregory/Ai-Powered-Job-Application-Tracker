@@ -1,4 +1,3 @@
-// app/layout.tsx (Public Layout)
 import { ReactNode } from "react";
 import Header from "@/components/view/header/Header";
 import Footer from "@/components/view/footer/Footer";

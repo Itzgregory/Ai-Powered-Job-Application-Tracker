@@ -35,7 +35,6 @@ const authSlice = createSlice({
       state.loading = true;
       state.error = null;
     },
-    // In authSlice.ts, update the loginSuccess reducer
     loginSuccess: (state, action: PayloadAction<{ user: User; token: string; role: string; id: string }>) => {
       state.user = action.payload.user;
       state.role = action.payload.role;
@@ -44,12 +43,12 @@ const authSlice = createSlice({
       state.error = null;
 
       try {
-        // Force synchronous update to localStorage
+        // forcing a synchronous update to localStorage
         localStorage.setItem("user", JSON.stringify(action.payload.user));
         localStorage.setItem("userRole", action.payload.role || "");
         localStorage.setItem("userId", action.payload.id || "");
 
-        // Add additional persistence to sessionStorage for debugging
+        // add persistence to sessionStorage for debugging
         sessionStorage.setItem("lastLoginTime", new Date().toISOString());
         sessionStorage.setItem("lastLoginUser", action.payload.id || "");
 
@@ -60,7 +59,7 @@ const authSlice = createSlice({
             return;
           }
 
-          // Ensure token is properly set
+          // ensure token is properly set
           setAuthToken(
             action.payload.id,
             token,
@@ -68,14 +67,11 @@ const authSlice = createSlice({
             action.payload.user?.firstName || "",
             action.payload.user?.lastName || "",
             action.payload.user?.email || "",
-            3600000 // 1 hour expiry
+            3600000 
           );
-
-          // Double-check token was set correctly
           const tokenCheck = getAuthToken();
           if (!tokenCheck) {
             console.error("Token was not set correctly");
-            // Try again with a direct localStorage call
             localStorage.setItem("users", JSON.stringify({
               [action.payload.id]: {
                 token,

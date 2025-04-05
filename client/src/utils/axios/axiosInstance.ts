@@ -11,48 +11,51 @@ const axiosInstance = axios.create({
   },
 });
 
-// Track 401 errors to prevent infinite redirect loops
+// Tracking 401 errors because i hadn't implemented the logic for certain endpoints, so this can prevent infinite redirect loops
 let isRefreshing = false;
 
 axiosInstance.interceptors.request.use(
   (config) => {
     const token = getAuthToken();
     const valid = isTokenValid();
-    console.log("Request Debug - Token:", { token, valid });
 
     if (token && valid) {
       config.headers.Authorization = `Bearer ${token}`;
+    } else if (!token || !valid) {
     }
     return config;
   },
-  (error) => Promise.reject(error)
+  (error) => {
+    return Promise.reject(error);
+  }
 );
-
 
 axiosInstance.interceptors.response.use(
   (response) => response,
   (error) => {
     const originalRequest = error.config;
+    if (error.response?.status === 401 || error.response?.status === 403) {
 
-    // Handle 401 and 403 errors
-    if (
-      (error.response?.status === 401 || error.response?.status === 403) &&
-      !originalRequest._retry &&
-      !isRefreshing
-    ) {
-      isRefreshing = true;
-      console.log("Unauthorized request detected, handling session expiration");
+      const errorMessage = error.response.data?.message?.toLowerCase() || "";
+      const isTokenIssue =
+        errorMessage.includes("token expired") ||
+        errorMessage.includes("invalid token") ||
+        errorMessage.includes("authentication failed");
 
-      // Dispatch an event that the AuthContext can listen for
-      window.dispatchEvent(new Event("auth:expired"));
-
-      // Clear auth data and redirect to login
-      clearAuthData();
-      window.location.href = "/login";
+      if (isTokenIssue && !originalRequest._retry && !isRefreshing) {
+        isRefreshing = true;
+        window.dispatchEvent(new Event("auth:expired"));
+        clearAuthData();
+        window.location.href = "/login";
+      } else if (!isTokenIssue) {
+        originalRequest._retry = true;
+      }
+    } else if (error.response) {
+    } else {
     }
 
+    isRefreshing = false;
     return Promise.reject(error);
-    
   }
 );
 

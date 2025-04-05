@@ -38,9 +38,9 @@ export const useDashboardData = () => {
         }
       
         try {
-          console.log("Fetching user details for ID:", userId);
+          // console.log("Fetching user details for ID:", userId);
           const userData = await fetchUserDetails(userId);
-          console.log("Fetched User Data:", userData);
+          // console.log("Fetched User Data:", userData);
       
           if (!userData) {
             console.warn("User data is empty");
@@ -60,9 +60,9 @@ export const useDashboardData = () => {
         }
       };
       const userInState = !!user;
-      const userInStorage = !!localStorage.getItem("user");
+      // const userInStorage = !!localStorage.getItem("user");
       
-      console.log("User in state:", userInState, "User in localStorage:", userInStorage);
+      // console.log("User in state:", userInState, "User in localStorage:", userInStorage);
       
       if (!userInState) {
         loadedUserDetails();

@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import developerAnimation from "../../../../public/asset/coming-soon.png";
-import styles from "./ComingSoon.module.css"; 
+import styles from "./comingsoon.module.css.css"; 
 
 const CountdownTimer = ({ targetDate }: { targetDate: string }) => {
     const calculateTimeLeft = () => {
@@ -37,7 +37,7 @@ const ComingSoon = () => {
     return (
         <div className={styles.container}>
             <h1 className={styles.title}>🚀 Coming Soon!</h1>
-            <p className={styles.subtitle}>We're working on something amazing.</p>
+            <p className={styles.subtitle}>We are working on something amazing.</p>
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
