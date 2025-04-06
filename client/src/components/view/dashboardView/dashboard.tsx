@@ -1,9 +1,8 @@
 "use client";
-
 import { useDashboardData } from "@/components/container/talentDashboard/useDashboard";
 import IntroSection from "@/components/view/dashboardView/hero/intro";
 import CurrentStats from "@/components/view/dashboardView/statsSection/statsSection";
-import JobsSection from "@/components//view/dashboardView/JobSection/jobSections";
+import JobsSection from "@/components/view/dashboardView/JobSection/jobSections";
 import InterviewsSection from "@/components/view/dashboardView/interviewSection/interviewSection";
 import Link from "next/link";
 
@@ -66,10 +65,10 @@ export default function Dashboard() {
     <div className="parent-page p-4 pb-16">
       <header className="mb-8">
         <h1 className="text-2xl font-bold mb-2">
-          Welcome{user?.firstName ? `, ${user.firstName}` : ""}!
+          Welcome{user?.firstName && `, ${user.firstName}`}!
         </h1>
         <p className="text-gray-600">
-          Here's an overview of your job search activity
+          Here&apos;s an overview of your job search activity
         </p>
       </header>
 

@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/redux/store/store";
 import { logout } from "@/redux/slices/user/authSlice";
+import Image from "next/image";
 import logo from "../../../../public/asset/logo.png";
 import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
@@ -50,7 +51,14 @@ const Header = () => {
             >
                 <div className={styles.container}>
                     <Link href="/" className={styles.brand}>
-                        <img src={logo.src} alt="Logo" className={styles.logo} />
+                        <Image 
+                            src={logo} 
+                            alt="Logo" 
+                            className={styles.logo}
+                            width={40}
+                            height={40}
+                            priority
+                        />
                         <span className={styles.brandName}>AiPowered</span>
                     </Link>
 

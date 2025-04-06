@@ -23,7 +23,7 @@ export interface RegistrationFormData {
   otherName?: string;
   password: string;
   confirmPassword: string;
-  termsAccepted?: Boolean;
+  termsAccepted?: boolean;
 }
 
 export interface RegistrationApiPayload {
@@ -33,7 +33,7 @@ export interface RegistrationApiPayload {
   otherName?: string;
   password: string;
   confirmPassword: string;
-  termsAccepted?: Boolean;
+  termsAccepted?: boolean;
 }
 
 export interface LoginApiPayload {

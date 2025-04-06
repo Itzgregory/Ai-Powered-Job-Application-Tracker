@@ -15,7 +15,8 @@ type LoginFormData = {
 
 const Login = () => {
   const { register, handleSubmit, formState: { errors } } = useForm<LoginFormData>();
-  const { loading, user, localError, onSubmit, handleLogout } = useLogin();
+  const { loading, localError, onSubmit } = useLogin();
+  // const { loading, user, localError, onSubmit, handleLogout } = useLogin();
   const [isEmailModalOpen, setIsEmailModalOpen] = useState(false);
   const [isSuccessModalOpen, setIsSuccessModalOpen] = useState(false);
   const [showPassword, setShowPassword] = useState(false); 

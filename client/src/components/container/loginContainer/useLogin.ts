@@ -6,6 +6,8 @@ import { loginUser } from "@/app/api/user/auth";
 import { RootState } from "@/redux/store/store";
 import { LoginFormData } from "@/types/user/authType";
 import { getAuthToken, isTokenValid, setAuthToken } from "@/utils/auth/authutils";
+import { getErrorMessage } from '../../../types/api/api';
+
 
 const useLogin = () => {
   const dispatch = useDispatch();
@@ -62,9 +64,9 @@ const useLogin = () => {
         // console.log("[useLogin] Final Redux state:", reduxState);
         router.push("/talentdashboard");
       }, 1000); 
-    } catch (err:any) {
-      console.error("[useLogin] Login error:", err);
-      const message = err.response?.data?.message || "Login failed";
+    } catch (err) {
+      const message = getErrorMessage(err);
+      console.error("[useLogin] Login error:", message);
       dispatch(loginFailure(message));
       setLocalError(message);
     }

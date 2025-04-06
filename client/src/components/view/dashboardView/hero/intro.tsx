@@ -1,10 +1,10 @@
 import React from "react";
 import styles from "../GeneralStyles.module.css";
 
-interface IntroProps {
-  title: string;
-  content: number;
-}
+// interface IntroProps {
+//   title: string;
+//   content: number;
+// }
 
 interface IntrosProps {
   intros: {

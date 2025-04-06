@@ -3,8 +3,9 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import useRegister from "@/components/container/registerContainer/useRegister"
+import useRegistration from "../../container/registerContainer/useRegister";
 import styles from "../login/Login.module.css";
+import { useRouter } from "next/navigation";
 
 type RegistrationFormData = {
   email: string;
@@ -17,17 +18,30 @@ type RegistrationFormData = {
 };
 
 const Registration = () => {
-  const { register, handleSubmit, watch, formState: { errors } } = useForm<RegistrationFormData>();
-  const {loading, localError, onSubmit} = useRegister();
+  const router = useRouter();
   const [isSuccessModalOpen, setIsSuccessModalOpen] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-  
+
+  const {
+    register,
+    handleSubmit,
+    reset,
+    watch,
+    formState: { errors },
+  } = useForm<RegistrationFormData>();
+
+  const { loading, localError, onSubmit } = useRegistration({
+    onSuccess: () => {
+      setIsSuccessModalOpen(true);
+      reset();
+    },
+  });
 
   return (
     <div className={`${styles.loginContainer} flex flex-col items-center justify-center h-screen bg-gray-100`}>
       <h1 className={`${styles.titleDark} text-3xl font-bold mb-6`}>Create an Account</h1>
-      <div className={`${styles.registerCard} bg-white p-6 rounded-lg shadow-md`} style={{ width: "500px", height: "auto" }}>
+      <div className={`${styles.registerCard} bg-white p-6 rounded-lg shadow-md`} style={{ width: "500px" }}>
         <h2 className={`${styles.title} text-2xl font-bold text-center mb-4`}>Register</h2>
         {localError && <p className={`${styles.errorText} text-red-500 text-sm text-center mb-4`}>{localError}</p>}
         <form onSubmit={handleSubmit(onSubmit)} className={`${styles.loginForm} space-y-4`}>
@@ -35,14 +49,14 @@ const Registration = () => {
             <div className={styles.inputBox}>
               <input
                 type="email"
-                {...register("email", { 
+                {...register("email", {
                   required: "Email is required",
                   pattern: {
                     value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                    message: "Invalid email address"
-                  }
+                    message: "Invalid email address",
+                  },
                 })}
-                className={`${styles.inputField} w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500`}
+                className={`${styles.inputField}`}
                 placeholder=" "
               />
               <label className={styles.label}>Email</label>
@@ -54,14 +68,11 @@ const Registration = () => {
             <div className={styles.inputBox}>
               <input
                 type="text"
-                {...register("firstName", { 
+                {...register("firstName", {
                   required: "First name is required",
-                  minLength: {
-                    value: 2,
-                    message: "First name must be at least 2 characters"
-                  }
+                  minLength: { value: 2, message: "First name must be at least 2 characters" },
                 })}
-                className={`${styles.inputField} w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500`}
+                className={`${styles.inputField}`}
                 placeholder=" "
               />
               <label className={styles.label}>First Name</label>
@@ -73,14 +84,11 @@ const Registration = () => {
             <div className={styles.inputBox}>
               <input
                 type="text"
-                {...register("lastName", { 
+                {...register("lastName", {
                   required: "Last name is required",
-                  minLength: {
-                    value: 2,
-                    message: "Last name must be at least 2 characters"
-                  }
+                  minLength: { value: 2, message: "Last name must be at least 2 characters" },
                 })}
-                className={`${styles.inputField} w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500`}
+                className={`${styles.inputField}`}
                 placeholder=" "
               />
               <label className={styles.label}>Last Name</label>
@@ -93,7 +101,7 @@ const Registration = () => {
               <input
                 type="text"
                 {...register("otherName")}
-                className={`${styles.inputField} w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500`}
+                className={`${styles.inputField}`}
                 placeholder=" "
               />
               <label className={styles.label}>Other Name (Optional)</label>
@@ -104,21 +112,15 @@ const Registration = () => {
             <div className={styles.inputBox} style={{ position: "relative" }}>
               <input
                 type={showPassword ? "text" : "password"}
-                {...register("password", { 
+                {...register("password", {
                   required: "Password is required",
-                  minLength: {
-                    value: 6,
-                    message: "Password must be at least 6 characters"
-                  }
+                  minLength: { value: 6, message: "Password must be at least 6 characters" },
                 })}
-                className={`${styles.inputField} w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500`}
+                className={`${styles.inputField}`}
                 placeholder=" "
               />
               <label className={styles.label}>Password</label>
-              <span 
-                onClick={() => setShowPassword(prev => !prev)}
-                className={styles.passwordViewHide}
-              >
+              <span onClick={() => setShowPassword(prev => !prev)} className={styles.passwordViewHide}>
                 {showPassword ? <FaEyeSlash /> : <FaEye />}
               </span>
             </div>
@@ -129,18 +131,15 @@ const Registration = () => {
             <div className={styles.inputBox}>
               <input
                 type={showConfirmPassword ? "text" : "password"}
-                {...register("confirmPassword", { 
+                {...register("confirmPassword", {
                   required: "Confirm password is required",
-                  validate: (value) => value === watch("password") || "Passwords do not match"
+                  validate: value => value === watch("password") || "Passwords do not match",
                 })}
-                className={`${styles.inputField} w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500`}
+                className={`${styles.inputField}`}
                 placeholder=" "
               />
               <label className={styles.label}>Confirm Password</label>
-              <span 
-                onClick={() => setShowConfirmPassword(prev => !prev)}
-                className={styles.passwordViewHide}
-              >
+              <span onClick={() => setShowConfirmPassword(prev => !prev)} className={styles.passwordViewHide}>
                 {showConfirmPassword ? <FaEyeSlash /> : <FaEye />}
               </span>
             </div>
@@ -151,8 +150,8 @@ const Registration = () => {
             <label className="flex items-center space-x-2">
               <input
                 type="checkbox"
-                {...register("termsAccepted", { 
-                  required: "You must accept the terms and conditions"
+                {...register("termsAccepted", {
+                  required: "You must accept the terms and conditions",
                 })}
                 className="w-4 h-4"
               />
@@ -161,8 +160,7 @@ const Registration = () => {
               </span>
             </label>
             {errors.termsAccepted && <p className={styles.invalidFeedback}>{errors.termsAccepted.message}</p>}
-        </div>
-
+          </div>
 
           <button
             type="submit"
@@ -178,19 +176,19 @@ const Registration = () => {
           </a>
         </div>
       </div>
-      
+
       {isSuccessModalOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
           <div className="bg-white p-6 rounded-lg shadow-lg max-w-md w-full">
             <h3 className="text-xl font-bold mb-4 text-center">Registration Successful!</h3>
             <p className="text-center mb-6">Your account has been created successfully. You can now log in.</p>
             <div className="flex justify-center">
-              <a 
-                href="/login" 
+              <button
+                onClick={() => router.push("/login")}
                 className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors"
               >
                 Go to Login
-              </a>
+              </button>
             </div>
           </div>
         </div>

@@ -20,6 +20,8 @@ import {
 import { fetchUserDetails } from '@/app/api/user/auth';
 import { loginSuccess } from '@/redux/slices/user/authSlice';
 import { getAuthToken, getUserRole } from '@/utils/auth/authutils';
+import { getErrorMessage } from '../../../types/api/api';
+
 
 export const useDashboardData = () => {
     const dispatch = useDispatch();
@@ -38,12 +40,8 @@ export const useDashboardData = () => {
         }
       
         try {
-          // console.log("Fetching user details for ID:", userId);
           const userData = await fetchUserDetails(userId);
-          // console.log("Fetched User Data:", userData);
-      
           if (!userData) {
-            console.warn("User data is empty");
             setLocalError("User data could not be loaded.");
             return;
           }
@@ -55,15 +53,13 @@ export const useDashboardData = () => {
             id: userId 
           }));
         } catch (err) {
-          console.error("Failed to fetch user details:", err);
-          setLocalError("Failed to load user details");
+          const message = getErrorMessage(err);
+          console.error("Failed to fetch user details:", message);
+          setLocalError(message);
         }
       };
+      
       const userInState = !!user;
-      // const userInStorage = !!localStorage.getItem("user");
-      
-      // console.log("User in state:", userInState, "User in localStorage:", userInStorage);
-      
       if (!userInState) {
         loadedUserDetails();
       }
@@ -85,12 +81,13 @@ export const useDashboardData = () => {
             dispatch(fetchJobsStart());
             const jobsData = await fetchPublicJobs();
             dispatch(fetchJobsSuccess(jobsData));
-          } catch (err: any) {
-            console.error('Failed to fetch job data:', err);
-            setLocalError('Failed to load job data');
-            dispatch(fetchAppliedJobsFailure('Failed to fetch applied jobs'));
-            dispatch(fetchInterviewsFailure('Failed to fetch interviews'));
-            dispatch(fetchJobsFailure('Failed to fetch jobs'));
+          } catch (err) {
+            const message = getErrorMessage(err);
+            console.error('Failed to fetch job data:', message);
+            setLocalError(message);
+            dispatch(fetchAppliedJobsFailure(message));
+            dispatch(fetchInterviewsFailure(message));
+            dispatch(fetchJobsFailure(message));
           } finally {
             setLoading(false);
           }

@@ -10,7 +10,7 @@ export type UserSession = {
 const getUsers = (): Record<string, UserSession> => {
   try {
     return JSON.parse(localStorage.getItem("users") || "{}");
-  } catch (error) {
+  } catch {
     return {};
   }
 };
@@ -18,7 +18,7 @@ const getUsers = (): Record<string, UserSession> => {
 const setUsers = (users: Record<string, UserSession>): void => {
   try {
     localStorage.setItem("users", JSON.stringify(users));
-  } catch (error) {
+  } catch {
   }
 };
 
@@ -103,7 +103,7 @@ export const isTokenValid = (): boolean => {
     }
     return isValid;
 
-  } catch (error) {
+  } catch {
     return false;
   }
 };

@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import {Job, AppliedJob, Interview} from "@/types/jobs/jobTypes";
-import { fetchAppliedJobs } from "@/app/api/job/job";
+// import { fetchAppliedJobs } from "@/app/api/job/job";
 
 interface JobSate {
     jobs: Job[];

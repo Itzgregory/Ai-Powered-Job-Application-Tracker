@@ -3,6 +3,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { FaBars } from "react-icons/fa";
+import Image from "next/image";
 import logo from "../../../../public/asset/logo.png";
 import styles from "./Sidebar.module.css";
 
@@ -23,28 +24,21 @@ const Sidebar = () => {
     };
     
     checkMobile();
-    
     window.addEventListener('resize', checkMobile);
-    
-    return () => {
-      window.removeEventListener('resize', checkMobile);
-    };
+    return () => window.removeEventListener('resize', checkMobile);
   }, [mobileOpen]);
 
   useEffect(() => {
     const handleSidebarToggle = (event: Event) => {
       const customEvent = event as CustomEvent<{ collapsed: boolean }>;
       setCollapsed(customEvent.detail.collapsed);
-      
       if (isMobile) {
         setMobileOpen(!customEvent.detail.collapsed);
       }
     };
 
     window.addEventListener("sidebarStateChange", handleSidebarToggle);
-    return () => {
-      window.removeEventListener("sidebarStateChange", handleSidebarToggle);
-    };
+    return () => window.removeEventListener("sidebarStateChange", handleSidebarToggle);
   }, [isMobile]);
 
   const menuItems = [
@@ -57,11 +51,9 @@ const Sidebar = () => {
   const toggleSidebar = () => {
     const newState = !collapsed;
     setCollapsed(newState);
-    
     if (isMobile) {
       setMobileOpen(!collapsed);
     }
-    
     window.dispatchEvent(
       new CustomEvent('sidebarStateChange', { 
         detail: { collapsed: newState } 
@@ -80,7 +72,14 @@ const Sidebar = () => {
           <div className={styles.header}>
             {!collapsed && 
               <Link href="/" className={styles.brand}>
-                <img src={logo.src} alt="Logo" className={styles.logo} />
+                <Image 
+                  src={logo} 
+                  alt="Logo" 
+                  className={styles.logo}
+                  width={40}
+                  height={40}
+                  priority
+                />
                 <span className={styles.brandName}>AiPowered</span>
               </Link>
             }

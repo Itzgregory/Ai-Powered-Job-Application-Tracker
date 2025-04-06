@@ -7,7 +7,6 @@ interface ExtendedAuthState extends AuthState {
   id: string | null;
 }
 
-
 const initialState: ExtendedAuthState = {
   user: null,
   role: null,
@@ -25,7 +24,6 @@ if (typeof window !== "undefined") {
   initialState.role = storedRole || null;
   initialState.id = storedId || null;
 }
-
 
 const authSlice = createSlice({
   name: "auth",
@@ -67,7 +65,7 @@ const authSlice = createSlice({
             action.payload.user?.firstName || "",
             action.payload.user?.lastName || "",
             action.payload.user?.email || "",
-            3600000 
+            3600000
           );
           const tokenCheck = getAuthToken();
           if (!tokenCheck) {
@@ -86,7 +84,7 @@ const authSlice = createSlice({
             localStorage.setItem("userId", action.payload.id);
           }
         }
-      } catch (error) {
+      } catch {
         sessionStorage.setItem('emergencyAuthBackup', JSON.stringify({
           user: action.payload.user,
           token: action.payload.token,
