@@ -7,9 +7,12 @@ import Image from "next/image";
 import logo from "../../../../public/asset/logo.png";
 import styles from "./Sidebar.module.css";
 
-const Sidebar = () => {
+interface SidebarProps {
+  collapsed: boolean;
+}
+
+const Sidebar: React.FC<SidebarProps> = ({ collapsed }) => {
   const pathname = usePathname();
-  const [collapsed, setCollapsed] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -19,7 +22,11 @@ const Sidebar = () => {
       const mobile = width < 768;
       setIsMobile(mobile);
       if (mobile && !mobileOpen) {
-        setCollapsed(true);
+        window.dispatchEvent(
+          new CustomEvent('sidebarStateChange', { 
+            detail: { collapsed: true } 
+          })
+        );
       }
     };
     
@@ -29,28 +36,13 @@ const Sidebar = () => {
   }, [mobileOpen]);
 
   useEffect(() => {
-    const handleSidebarToggle = (event: Event) => {
-      const customEvent = event as CustomEvent<{ collapsed: boolean }>;
-      setCollapsed(customEvent.detail.collapsed);
-      if (isMobile) {
-        setMobileOpen(!customEvent.detail.collapsed);
-      }
-    };
-
-    window.addEventListener("sidebarStateChange", handleSidebarToggle);
-    return () => window.removeEventListener("sidebarStateChange", handleSidebarToggle);
-  }, [isMobile]);
-
-  const menuItems = [
-    { name: "Dashboard", path: "/talentdashboard" },
-    { name: "Jobs", path: "/talentdashboard/jobs" },
-    { name: "Profile", path: "/talentdashboard/profile" },
-    { name: "Settings", path: "/talentdashboard/settings" },
-  ];
+    if (isMobile) {
+      setMobileOpen(!collapsed);
+    }
+  }, [collapsed, isMobile]);
 
   const toggleSidebar = () => {
     const newState = !collapsed;
-    setCollapsed(newState);
     if (isMobile) {
       setMobileOpen(!collapsed);
     }
@@ -60,6 +52,13 @@ const Sidebar = () => {
       })
     );
   };
+
+  const menuItems = [
+    { name: "Dashboard", path: "/talentdashboard" },
+    { name: "Jobs", path: "/talentdashboard/jobs" },
+    { name: "Profile", path: "/talentdashboard/profile" },
+    { name: "Settings", path: "/talentdashboard/settings" },
+  ];
 
   return (
     <>
@@ -113,8 +112,6 @@ const Sidebar = () => {
           )}
         </div>
       </aside>
-      
-      {/* Show overlay when sidebar is open on mobile */}
       {isMobile && !collapsed && (
         <div className={styles.overlay} onClick={toggleSidebar}></div>
       )}

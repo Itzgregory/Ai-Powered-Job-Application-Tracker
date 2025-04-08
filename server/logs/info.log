@@ -407,3 +407,15 @@
 [2025-04-04 18:38:31] INFO: [Mongoose] users.updateOne {"_id":"67da9b9feb5c288501e77aac","__v":59} {"$set":{"tokens":["eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZGE5YjlmZWI1YzI4ODUwMWU3N2FhYyIsImVtYWlsIjoiZGV2LnRlc3RlcjAwOEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc0Mzc4ODMxMSwiZXhwIjoxNzQzODc0NzExfQ.vLfq_j8Sktqvy5g3oGq5Wb3zxxyNJad4zYsGD-ipiH8"],"lastLogin":"2025-04-04T17:38:31.727Z","updatedAt":"2025-04-04T17:38:31.728Z"},"$inc":{"__v":1}}
 [2025-04-06 12:19:16] INFO: Database connection established
 [2025-04-06 12:19:16] INFO: Server is listening on port 8080
+[2025-04-06 15:42:08] INFO: Database connection established
+[2025-04-06 15:42:08] INFO: Server is listening on port 8080
+[2025-04-06 15:42:30] INFO: [Mongoose] users.findOne {"email":"dev.tester008@gmail.com"} {}
+[2025-04-06 15:42:30] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-04-06 15:42:31] INFO: [Mongoose] users.updateOne {"_id":"67da9b9feb5c288501e77aac","__v":60} {"$set":{"tokens":["eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZGE5YjlmZWI1YzI4ODUwMWU3N2FhYyIsImVtYWlsIjoiZGV2LnRlc3RlcjAwOEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc0Mzk1MDU1MSwiZXhwIjoxNzQ0MDM2OTUxfQ.pnxF9XAXZ4z2L798qKNCL335VFtxBIp7mzP-ybtKKuU"],"lastLogin":"2025-04-06T14:42:31.015Z","updatedAt":"2025-04-06T14:42:31.021Z"},"$inc":{"__v":1}}
+[2025-04-07 09:47:51] INFO: MongoDB disconnected. Attempting to reconnect...
+[2025-04-07 09:47:56] INFO: Successfully connected to MongoDB
+[2025-04-08 14:46:14] INFO: [Mongoose] users.findOne {"email":"dev.tester008@gmail.com"} {}
+[2025-04-08 14:46:20] INFO: [Mongoose] users.findOne {"email":"dev.tester008@gmail.com"} {}
+[2025-04-08 14:46:25] INFO: [Mongoose] users.findOne {"email":"dev.tester008@gmail.com"} {}
+[2025-04-08 14:46:35] INFO: [Mongoose] users.findOne {"email":"dev.tester008@gmail.com"} {}
+[2025-04-08 14:46:35] INFO: [Mongoose] users.updateOne {"_id":"67da9b9feb5c288501e77aac","__v":61} {"$set":{"tokens":["eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZGE5YjlmZWI1YzI4ODUwMWU3N2FhYyIsImVtYWlsIjoiZGV2LnRlc3RlcjAwOEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc0NDExOTk5NSwiZXhwIjoxNzQ0MjA2Mzk1fQ.mxKoHufy_gZWPVxa8wLbsyi7lpf7ofcyiuyqUC6Q6Sg"],"lastLogin":"2025-04-08T13:46:35.779Z","updatedAt":"2025-04-08T13:46:35.790Z"},"$inc":{"__v":1}}

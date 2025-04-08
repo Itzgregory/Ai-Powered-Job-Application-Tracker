@@ -6,6 +6,10 @@ import { FaBars } from "react-icons/fa";
 import { isTokenValid } from "@/utils/auth/authutils";
 import styles from "./TalentDashboardLayout.module.css"
 
+// interface SidebarProps {
+//   collapsed: boolean;
+// }
+
 export default function TalentDashboardLayout({ 
   children 
 }: { 
@@ -36,12 +40,7 @@ export default function TalentDashboardLayout({
 
   useEffect(() => {
     const isAuthenticated = document.cookie.includes("auth-validated=true") || isTokenValid();
-    if (!isAuthenticated) {
-
-      setIsLoading(false);
-    } else {
-      setIsLoading(false);
-    }
+    setIsLoading(!isAuthenticated);
   }, [router]);
 
   if (isLoading) return <div>Loading...</div>;
@@ -49,18 +48,28 @@ export default function TalentDashboardLayout({
   const showMobileMenuButton = isMobile;
 
   return (
-    <div className={`${styles.dashboardLayout} ${sidebarCollapsed ? styles.collapsed : ""}`}>
-      <Sidebar />
+    <div className={styles.dashboardContainer}>
+      <Sidebar collapsed={sidebarCollapsed} />
       {showMobileMenuButton && (
         <button
-          onClick={() => setSidebarCollapsed(!sidebarCollapsed)}
+          onClick={() => {
+            const newState = !sidebarCollapsed;
+            setSidebarCollapsed(newState);
+            window.dispatchEvent(
+              new CustomEvent('sidebarStateChange', { 
+                detail: { collapsed: newState } 
+              })
+            );
+          }}
           className={styles.mobileMenuButton}
           aria-label={sidebarCollapsed ? "Open sidebar" : "Close sidebar"}
         >
           <FaBars size={24} />
         </button>
       )}
-      <main className={styles.mainContent}>{children}</main>
+      <main className={`${styles.contentArea} ${sidebarCollapsed ? styles.contentWithCollapsedSidebar : ''}`}>
+        {children}
+      </main>
     </div>
   );
 }

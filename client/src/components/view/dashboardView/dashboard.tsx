@@ -37,7 +37,7 @@ export default function Dashboard() {
 
   if (loading) {
     return (
-      <div className="parent-page p-4 flex justify-center items-center h-screen">
+      <div className="flex justify-center items-center h-screen">
         <div className="text-center">
           <p className="text-lg">Loading your dashboard...</p>
         </div>
@@ -47,7 +47,7 @@ export default function Dashboard() {
 
   if (localError) {
     return (
-      <div className="parent-page p-4 flex justify-center items-center h-screen">
+      <div className="flex justify-center items-center h-screen">
         <div className="text-center">
           <p className="text-lg text-red-600">{localError}</p>
           <button 
@@ -62,7 +62,7 @@ export default function Dashboard() {
   }
 
   return (
-    <div className="parent-page p-4 pb-16">
+    <div className="pb-16">
       <header className="mb-8">
         <h1 className="text-2xl font-bold mb-2">
           Welcome{user?.firstName && `, ${user.firstName}`}!

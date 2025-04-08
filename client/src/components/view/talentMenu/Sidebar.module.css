@@ -4,7 +4,7 @@
   border-bottom-right-radius: 30px;
   left: 0;
   top: 0;
-  width: 30%; 
+  width: 250px;
   height: 100vh;
   background: var(--primary-color);
   color: white;
@@ -14,6 +14,7 @@
   scrollbar-color: #4a5568 #1a202c;
   z-index: 50;
 }
+
 .brand {
   display: flex;
   align-items: center;
@@ -40,18 +41,24 @@
 }
 
 .sidebar.collapsed {
-  left: 10px;
+  width: 45px;
+  overflow: hidden;
+  border-radius: 0 0 5px 0;
+  background: none; 
+  height: 45px;
   top: 10px;
-  width: 45px; 
-  height: 45px; 
-  overflow: hidden; 
-  border-radius: 0 0 5px 0; 
+  left: 10px;
 }
 
-@media (max-width: 767px) {
+.sidebar.collapsed:hover {
+  background: var(--hover-color);
+}
+
+@media (max-width: 768px) {
   .sidebar {
-    transform: translateX(-100%);
-    width: 80%; 
+    position: fixed;
+    top: 0;
+    left: 0;
   }
   
   .sidebar.collapsed {
@@ -64,12 +71,17 @@
 }
 
 @media (min-width: 344px) and (max-width: 767px) {
+  .sidebar {
+    transform: translateX(-100%);
+    width: 250px;
+  }
+  
+  .sidebar.collapsed {
+    transform: translateX(-100%);
+  }
+  
   .sidebar:not(.collapsed).mobile-open {
     transform: translateX(0);
-    display: block;
-  }
-  .mobileMenuButton {
-    display: flex !important;
   }
 }
 
@@ -88,10 +100,12 @@
 
 .sidebarContent {
   padding: 1.5rem;
+  padding-right: 0; 
 }
 
 .collapsed .sidebarContent {
   padding: 0.5rem;
+  padding-right: 0;
 }
 
 .header {
@@ -104,7 +118,7 @@
 .collapsed .header {
   justify-content: center;
   padding: 0;
-  margin-bottom: 0; 
+  margin-bottom: 0;
 }
 
 .toggleButton {
@@ -120,7 +134,7 @@
 }
 
 .toggleButton:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--hover-color);
 }
 
 .menuList {
@@ -135,7 +149,7 @@
 
 .link {
   display: block;
-  color: var( --text-color-light);
+  color: var(--text-color-light);
   text-decoration: none;
   padding: 0.75rem;
   border-radius: 0.375rem;
