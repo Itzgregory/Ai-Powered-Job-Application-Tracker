@@ -128,7 +128,7 @@ const Header = () => {
                             </Link>
                             {user ? (
                                 <>
-                                    <Link href="/dashboard" className={styles.sideMenuItem} onClick={() => setSideMenuOpen(false)}>
+                                    <Link href="/talentdashboard" className={styles.sideMenuItem} onClick={() => setSideMenuOpen(false)}>
                                         Dashboard
                                     </Link>
                                     <button

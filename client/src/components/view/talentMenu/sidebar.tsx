@@ -64,7 +64,7 @@ const Sidebar: React.FC<SidebarProps> = ({ collapsed }) => {
     <>
       <aside 
         className={`${styles.sidebar} ${collapsed ? styles.collapsed : ""} ${
-          isMobile && !collapsed ? styles['mobile-open'] : ""
+          isMobile && !collapsed ? styles.mobileOpen : ""
         }`}
       >
         <div className={styles.sidebarContent}>
