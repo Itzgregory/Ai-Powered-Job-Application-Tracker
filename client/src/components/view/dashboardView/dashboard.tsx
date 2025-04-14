@@ -1,11 +1,12 @@
 "use client";
-import { useDashboardData } from "@/components/container/talentDashboard/useDashboard";
-import IntroSection from "@/components/view/dashboardView/hero/intro";
-import CurrentStats from "@/components/view/dashboardView/statsSection/statsSection";
-import JobsSection from "@/components/view/dashboardView/JobSection/jobSections";
-import InterviewsSection from "@/components/view/dashboardView/interviewSection/interviewSection";
+import { useDashboardData } from "../../container/talentDashboard/useDashboard";
+import IntroSection from "../../view/dashboardView/hero/intro";
+import CurrentStats from "../../view/dashboardView/statsSection/statsSection";
+import JobsSection from "../../view/dashboardView/JobSection/jobSections";
+import InterviewsSection from "../../view/dashboardView/interviewSection/interviewSection";
+import ProfileSection from "../../view/dashboardView/profileSection/profileSection";
+import RecommendatioSvg from "../../view/dashboardView/svg/recommendation";
 import Link from "next/link";
-import styles from "./GeneralStyles.module.css";
 
 export default function Dashboard() {
   const { 
@@ -15,10 +16,13 @@ export default function Dashboard() {
     jobs, 
     appliedJobs, 
     interviews, 
-    stats 
+    stats,
+    upcomingInterviews,
+    handleStatusChange,
+    lastUpdated
   } = useDashboardData();
 
-  const introData = [
+  const mainIntroData = [
     {
       title: "Profile Review",
       content: "See my Review",
@@ -33,6 +37,28 @@ export default function Dashboard() {
       title: "CV Template",
       content: "Download CV template",
       image: { src: "/cv-template.png", alt: "CV Template Preview" },
+    },
+  ];
+
+  const resourcesIntroData = [
+    {
+      image: { src: "/profile-picture", alt: "Profile picture" },
+      title: "Interview Prep",
+      content: "Practice common questions",
+      button: { label: "Start Practicing", onClick: () => alert("Practice Started!") },
+    },
+  ];
+
+  const quickActionsData = [
+    {
+      title: "Save Job Search",
+      content: "Save your current search",
+      button: { label: "Save Search", onClick: () => alert("Search Saved!") },
+    },
+    {
+      title: "Network Events",
+      content: "Upcoming networking opportunities",
+      link: { label: "View Events", href: "/events" },
     },
   ];
 
@@ -52,7 +78,7 @@ export default function Dashboard() {
         <div className="text-center">
           <p className="text-lg text-red-600">{localError}</p>
           <button 
-            className="mt-4 px-4 py-2 bg-[#6b4423] text-[#FDFDFD] rounded hover:bg-[#54361a]"
+            className="mt-4 px-4 py-2 bg-[#6b4423] text-white rounded hover:bg-[#54361a] transition-colors"
             onClick={() => window.location.reload()}
           >
             Retry
@@ -63,69 +89,137 @@ export default function Dashboard() {
   }
 
   return (
-    <div className={styles.dashboard}>
-      <header className={styles.header}>
-        <h1>Welcome{user?.firstName && `, ${user.firstName}`}!</h1>
-        <p>Here's an overview of your job search activity</p>
+    <div className="bg-[#FDFDFD] min-h-screen font-cabin text-[#333333] w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <header className="text-left mb-8 md:mb-10">
+        <h1 className="font-playfair text-2xl sm:text-3xl md:text-4xl font-semibold text-[#004d40] mb-2">
+          Welcome back,
+        </h1>
+        <p className="text-base sm:text-lg text-[#666666]">
+          Here's an overview of your job search activity
+        </p>
       </header>
 
-      <section className={styles.section}>
-        <IntroSection intros={introData} />
-      </section>
-      
-      <section className={styles.section}>
-        <CurrentStats stats={stats} />
-      </section>
+      <div className="flex justify-end mb-6 md:mb-8">
+        <p className="text-sm text-gray-500">
+          Profile last updated on: {lastUpdated ? new Date(lastUpdated).toLocaleString() : 'Never'}
+        </p>
+      </div>
 
-      <section className={styles.section}>
-        <div className="flex justify-between items-center mb-4">
-          <h2>Recent Applications</h2>
-          <Link href="/dashboard/applications" className={styles.button}>
-            View All
-          </Link>
-        </div>
-        <JobsSection jobs={appliedJobs.slice(0, 3)} />
-      </section>
-      
-      <section className={styles.section}>
-        <div className="flex justify-between items-center mb-4">
-          <h2>Upcoming Interviews</h2>
-          <Link href="/dashboard/interviews" className={styles.button}>
-            View All
-          </Link>
-        </div>
-        <InterviewsSection interviews={interviews.filter(interview => interview.status === "upcoming").slice(0, 3)} />
-      </section>
-      
-      <section className={styles.recommendedJobs}>
-        <div className="flex justify-between items-center mb-4">
-          <h2>Recommended Jobs</h2>
-          <Link href="/dashboard/jobs" className={styles.button}>
-            Browse Jobs
-          </Link>
-        </div>
-        <div className="p-4">
-          <p>
-            {jobs.length > 0 
-              ? "Here are some job recommendations based on your profile"
-              : "No recommended jobs available at the moment. Complete your profile to get personalized recommendations."}
-          </p>
-          {jobs.length > 0 && (
-            <div className="mt-4 grid grid-cols-1 gap-4">
-              {jobs.slice(0, 2).map(job => (
-                <div key={job.id} className={styles.jobCard}>
-                  <h3>{job.title}</h3>
-                  <p>{job.company} • {job.location}</p>
-                  <p className="text-sm mt-1">{job.jobType}</p>
-                  <button className="mt-2 text-sm text-[#6b4423] hover:text-[#54361a]">
-                    View Details
-                  </button>
-                </div>
-              ))}
+      <main className="space-y-6 md:space-y-8">
+        {/* Profile Section */}
+        <section className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow p-4 sm:p-6">
+          <ProfileSection 
+            user={user}
+            loading={loading}
+            error={localError}
+            lastUpdated={lastUpdated}
+            handleStatusChange={handleStatusChange}
+          />
+        </section>
+
+        {/* Recommended Jobs */}
+        <section className="bg-white rounded-lg shadow-sm p-4 sm:p-6">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-4 gap-4">
+            <div>
+              <h2 className="font-playfair text-xl sm:text-2xl font-semibold text-[#004d40] mb-1">
+                Recommended Jobs
+              </h2>
+              <p className="text-[#666666]">
+                Jobs where you're a top applicant based on your profile job search
+              </p>
             </div>
-          )}
-        </div>
-      </section>
+            <Link 
+              href="/dashboard/jobs" 
+              className="inline-block bg-[#6b4423] text-white px-4 py-2 rounded text-sm sm:text-base font-semibold hover:bg-[#54361a] transition-colors"
+            >
+              Browse Jobs
+            </Link>
+          </div>
+          <div className="p-4 text-center">
+            <RecommendatioSvg className="mx-auto mb-4" />
+            <p className="text-[#666666] mb-4">
+              {jobs.length > 0 
+                ? "Here are some job recommendations based on your profile"
+                : "No recommended jobs available at the moment. Complete your profile to get personalized recommendations."}
+            </p>
+            {jobs.length > 0 && (
+              <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {jobs.slice(0, 3).map(job => (
+                  <div 
+                    key={job.id} 
+                    className="bg-[#FDFDFD] border border-gray-100 p-4 rounded hover:border-[#C0A080] transition-colors"
+                  >
+                    <h3 className="font-semibold text-[#333333]">{job.title}</h3>
+                    <p className="text-sm text-[#666666]">{job.company} • {job.location}</p>
+                    <p className="text-xs mt-2 text-[#666666]">{job.jobType}</p>
+                    <button className="mt-3 text-sm text-[#6b4423] hover:text-[#54361a] transition-colors">
+                      View Details
+                    </button>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        </section>
+
+        {/* Main Intro Sections */}
+        <section className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow p-4 sm:p-6">
+          <IntroSection intros={mainIntroData} />
+        </section>
+        
+        {/* Stats Section */}
+        <section className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow p-4 sm:p-6">
+          <CurrentStats stats={stats} />
+        </section>
+
+        {/* Resources Section */}
+        <section className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow p-4 sm:p-6">
+          <h2 className="font-playfair text-xl sm:text-2xl font-semibold text-[#004d40] mb-4">
+            Resources For You
+          </h2>
+          <IntroSection intros={resourcesIntroData} />
+        </section>
+
+        {/* Recent Applications */}
+        <section className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow p-4 sm:p-6">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-4 gap-4">
+            <h2 className="font-playfair text-xl sm:text-2xl font-semibold text-[#004d40]">
+              Recent Applications
+            </h2>
+            <Link 
+              href="/dashboard/applications" 
+              className="inline-block bg-[#6b4423] text-white px-4 py-2 rounded text-sm sm:text-base font-semibold hover:bg-[#54361a] transition-colors"
+            >
+              View All
+            </Link>
+          </div>
+          <JobsSection jobs={appliedJobs.slice(0, 3)} />
+        </section>
+        
+        {/* Quick Actions */}
+        <section className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow p-4 sm:p-6">
+          <h2 className="font-playfair text-xl sm:text-2xl font-semibold text-[#004d40] mb-4">
+            Quick Actions
+          </h2>
+          <IntroSection intros={quickActionsData} />
+        </section>
+        
+        {/* Upcoming Interviews */}
+        <section className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow p-4 sm:p-6">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-4 gap-4">
+            <h2 className="font-playfair text-xl sm:text-2xl font-semibold text-[#004d40]">
+              Upcoming Interviews
+            </h2>
+            <Link 
+              href="/dashboard/interviews" 
+              className="inline-block bg-[#6b4423] text-white px-4 py-2 rounded text-sm sm:text-base font-semibold hover:bg-[#54361a] transition-colors"
+            >
+              View All
+            </Link>
+          </div>
+          <InterviewsSection interviews={interviews.filter(interview => interview.status === "upcoming").slice(0, 3)} />
+        </section>
+      </main>
     </div>
   );
 }

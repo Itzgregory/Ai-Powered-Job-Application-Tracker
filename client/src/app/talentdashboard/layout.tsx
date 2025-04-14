@@ -2,13 +2,8 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Sidebar from "../../components/view/talentMenu/sidebar";
-import { FaBars } from "react-icons/fa";
 import { isTokenValid } from "@/utils/auth/authutils";
-import styles from "./TalentDashboardLayout.module.css"
-
-// interface SidebarProps {
-//   collapsed: boolean;
-// }
+import styles from "./TalentDashboardLayout.module.css";
 
 export default function TalentDashboardLayout({ 
   children 
@@ -45,29 +40,10 @@ export default function TalentDashboardLayout({
 
   if (isLoading) return <div>Loading...</div>;
 
-  const showMobileMenuButton = isMobile;
-
   return (
     <div className={styles.dashboardContainer}>
-      <Sidebar collapsed={sidebarCollapsed} />
-      {showMobileMenuButton && (
-        <button
-          onClick={() => {
-            const newState = !sidebarCollapsed;
-            setSidebarCollapsed(newState);
-            window.dispatchEvent(
-              new CustomEvent('sidebarStateChange', { 
-                detail: { collapsed: newState } 
-              })
-            );
-          }}
-          className={styles.mobileMenuButton}
-          aria-label={sidebarCollapsed ? "Open sidebar" : "Close sidebar"}
-        >
-          <FaBars size={24} />
-        </button>
-      )}
-      <main className={`${styles.contentArea} ${sidebarCollapsed ? styles.contentWithCollapsedSidebar : ''}`}>
+      <Sidebar collapsed={isMobile ? false : sidebarCollapsed} />
+      <main className={`${styles.contentArea} ${!isMobile && sidebarCollapsed ? styles.contentWithCollapsedSidebar : ''}`}>
         {children}
       </main>
     </div>

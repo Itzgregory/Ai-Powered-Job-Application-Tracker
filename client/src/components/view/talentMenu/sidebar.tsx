@@ -2,7 +2,16 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
-import { FaBars } from "react-icons/fa";
+import { 
+  FaHome, 
+  FaUser, 
+  FaBriefcase, 
+  FaFileAlt, 
+  FaEnvelope, 
+  FaCompass,
+  FaTimes,
+  FaBars
+} from "react-icons/fa";
 import Image from "next/image";
 import logo from "../../../../public/asset/logo.png";
 import styles from "./Sidebar.module.css";
@@ -54,20 +63,22 @@ const Sidebar: React.FC<SidebarProps> = ({ collapsed }) => {
   };
 
   const menuItems = [
-    { name: "Dashboard", path: "/talentdashboard" },
-    { name: "Jobs", path: "/talentdashboard/jobs" },
-    { name: "Profile", path: "/talentdashboard/profile" },
-    { name: "Settings", path: "/talentdashboard/settings" },
+    { name: "Home", path: "/talentdashboard", icon: <FaHome size={20} /> },
+    { name: "Profile", path: "/talentdashboard/profile", icon: <FaUser size={20} /> },
+    { name: "Jobs", path: "/talentdashboard/jobs", icon: <FaBriefcase size={20} /> },
+    { name: "Applied", path: "/talentdashboard/applied", icon: <FaFileAlt size={20} /> },
+    { name: "Messages", path: "/talentdashboard/messages", icon: <FaEnvelope size={20} /> },
+    { name: "Discover", path: "/talentdashboard/discover", icon: <FaCompass size={20} /> },
   ];
 
   return (
-    <>
-      <aside 
-        className={`${styles.sidebar} ${collapsed ? styles.collapsed : ""} ${
-          isMobile && !collapsed ? styles.mobileOpen : ""
-        }`}
-      >
-        <div className={styles.sidebarContent}>
+    <aside 
+      className={`${styles.sidebar} ${collapsed ? styles.collapsed : ""} ${
+        isMobile && !collapsed ? styles.mobileOpen : ""
+      } ${isMobile ? styles.mobile : ""}`}
+    >
+      <div className={styles.sidebarContent}>
+        {!isMobile && (
           <div className={styles.header}>
             {!collapsed && 
               <Link href="/" className={styles.brand}>
@@ -82,40 +93,36 @@ const Sidebar: React.FC<SidebarProps> = ({ collapsed }) => {
                 <span className={styles.brandName}>AiPowered</span>
               </Link>
             }
-            {!isMobile && (
-              <button 
-                onClick={toggleSidebar} 
-                className={styles.toggleButton}
-                aria-label={collapsed ? "Expand sidebar" : "Collapse sidebar"}
-              >
-                <FaBars size={20} />
-              </button>
-            )}
+            <button 
+              onClick={toggleSidebar} 
+              className={styles.toggleButton}
+              aria-label={collapsed ? "Expand sidebar" : "Collapse sidebar"}
+            >
+              {collapsed ? <FaBars size={20} /> : <FaTimes size={20} />}
+            </button>
           </div>
-          {!collapsed && (
-            <nav>
-              <ul className={styles.menuList}>
-                {menuItems.map((item) => (
-                  <li key={item.path} className={styles.menuItem}>
-                    <Link
-                      href={item.path}
-                      className={`${styles.link} ${
-                        pathname === item.path ? styles.activeLink : ""
-                      }`}
-                    >
-                      {item.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </nav>
-          )}
-        </div>
-      </aside>
-      {isMobile && !collapsed && (
-        <div className={styles.overlay} onClick={toggleSidebar}></div>
-      )}
-    </>
+        )}
+        
+        <nav>
+          <ul className={styles.menuList}>
+            {menuItems.map((item) => (
+              <li key={item.path} className={styles.menuItem}>
+                <Link
+                  href={item.path}
+                  className={`${styles.link} ${
+                    pathname === item.path ? styles.activeLink : ""
+                  }`}
+                  onClick={() => isMobile && toggleSidebar()}
+                >
+                  <span className={styles.icon}>{item.icon}</span>
+                  {!collapsed && <span className={styles.linkText}>{item.name}</span>}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
+    </aside>
   );
 };
 

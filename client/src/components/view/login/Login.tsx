@@ -56,12 +56,12 @@ const Login = () => {
   // }
 
   return (
-    <div className={`${styles.loginContainer} flex flex-col items-center justify-center h-screen bg-gray-100`}>
-      <h1 className={`${styles.titleDark} text-3xl font-bold mb-6`}>Welcome back</h1>
-      <div className={`${styles.loginCard} bg-white p-6 rounded-lg shadow-md w-96`}>
-        <h2 className={`${styles.title} text-2xl font-bold text-center mb-4`}>Login</h2>
-        {localError && <p className={`${styles.errorText} text-red-500 text-sm text-center`}>{localError}</p>}
-        <form onSubmit={handleSubmit(onSubmit)} className={`${styles.loginForm} space-y-4`}>
+    <div className={`${styles.loginContainer}`}>
+      <h1 className={`${styles.titleDark}`}>Welcome back</h1>
+      <div className={`${styles.loginCard}`}>
+        <h2 className={`${styles.title}`}>Login</h2>
+        {localError && <p className={`${styles.errorText}`}>{localError}</p>}
+        <form onSubmit={handleSubmit(onSubmit)} className={`${styles.loginForm}`}>
           <div className={styles.formGroup}>
             <div className={styles.inputBox}>
               <input
@@ -73,7 +73,7 @@ const Login = () => {
                     message: "Invalid email address"
                   }
                 })}
-                className={`${styles.inputField} w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500`}
+                className={`${styles.inputField} `}
                 placeholder=" "
               />
               <label className={styles.label}>Email</label>
@@ -92,7 +92,7 @@ const Login = () => {
                     message: "Password must be at least 6 characters"
                   }
                 })}
-                className={`${styles.inputField} w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500`}
+                className={`${styles.inputField}`}
                 placeholder=" "
               />
               <label className={styles.label}>Password</label>
@@ -114,10 +114,10 @@ const Login = () => {
             {loading ? "Logging in..." : "Login"}
           </button>
         </form>
-        <div className="text-center mt-3">
+        <div className="">
           <button
             onClick={() => setIsEmailModalOpen(true)} 
-            className={`${styles.signupText} text-blue-500 hover:underline`}
+            className={`${styles.signupText}`}
           >
             Forgot your password? Click here.
           </button>

@@ -1,43 +1,50 @@
-
 .dashboard {
-  background-color: #FDFDFD; 
+  background-color: #FDFDFD;
   padding: 2rem;
   min-height: 100vh;
-  font-family: var(--font-family-cabin); 
-  color: #333333; 
+  font-family: var(--font-family-cabin);
+  color: #333333;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 /* Header Styling */
 .header {
-  text-align: center;
+  text-align: left;
+  margin-bottom: 2.5rem;
+}
+
+.header2 {
+  text-align: right;
   margin-bottom: 2.5rem;
 }
 
 .header h1 {
-  font-family: 'Playfair Display', var(--font-family-serif); 
+  font-family: 'Playfair Display', var(--font-family-serif);
   font-size: 2.5rem;
   font-weight: 600;
-  color: #004d40; 
+  color: #004d40;
   margin-bottom: 0.5rem;
 }
 
 .header p {
   font-size: 1.1rem;
-  color: #666666; 
+  color: #666666;
 }
 
 /* Section Styling */
 .section {
-  background-color: #ffffff; 
+  background-color: #ffffff;
   border-radius: 8px;
   padding: 1.5rem;
   margin-bottom: 2rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease;
 }
 
 .section:hover {
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* Section Titles */
@@ -60,20 +67,20 @@
   background-color: #FDFDFD;
   padding: 1rem;
   border-radius: 6px;
-  border: 1px solid rgba(0, 0, 0, 0.05); 
+  border: 1px solid rgba(0, 0, 0, 0.05);
   text-align: center;
 }
 
 .statTitle {
   font-size: 0.9rem;
-  color: #666666; 
+  color: #666666;
   margin-bottom: 0.5rem;
 }
 
 .statCount {
   font-size: 1.75rem;
   font-weight: 600;
-  color: #6b4423; 
+  color: #6b4423;
 }
 
 /* Job and Interview Items */
@@ -95,7 +102,7 @@
 .interviewItem h3 {
   font-size: 1rem;
   font-weight: 600;
-  color: #333333; 
+  color: #333333;
 }
 
 .jobItem p,
@@ -110,6 +117,8 @@
   border-radius: 8px;
   padding: 1.5rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  height: auto; /* Changed from fixed 50vh to auto for responsiveness */
 }
 
 .recommendedJobs p {
@@ -127,14 +136,14 @@
 }
 
 .recommendedJobs .jobCard:hover {
-  border-color: #C0A080; 
+  border-color: #C0A080;
 }
 
 /* Links and Buttons */
 .button {
   display: inline-block;
-  background-color: #6b4423; 
-  color: #FDFDFD; 
+  background-color: #6b4423;
+  color: #FDFDFD;
   padding: 0.5rem 1rem;
   border-radius: 4px;
   text-decoration: none;
@@ -149,24 +158,88 @@
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 640px) {
   .dashboard {
     padding: 1rem;
   }
 
+  .header,
+  .header2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
   .header h1 {
-    font-size: 2rem;
+    font-size: 1.75rem;
+  }
+
+  .header p {
+    font-size: 1rem;
   }
 
   .section {
     padding: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .section h2 {
+    font-size: 1.25rem;
   }
 
   .statsContainer {
     grid-template-columns: 1fr;
   }
 
-  .section h2 {
-    font-size: 1.25rem;
+  .statCard {
+    padding: 0.75rem;
+  }
+
+  .statCount {
+    font-size: 1.5rem;
+  }
+
+  .recommendedJobs {
+    padding: 1rem;
+  }
+
+  .recommendedJobs .jobCard {
+    padding: 0.75rem;
+  }
+
+  .button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.75rem;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1023px) {
+  .dashboard {
+    padding: 1.5rem;
+  }
+
+  .header h1 {
+    font-size: 2.25rem;
+  }
+
+  .section {
+    padding: 1.25rem;
+  }
+
+  .statsContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .recommendedJobs {
+    padding: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .statsContainer {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+  .recommendedJobs {
+    padding: 1.5rem;
   }
 }

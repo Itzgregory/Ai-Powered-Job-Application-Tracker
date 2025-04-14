@@ -9,18 +9,18 @@
   flex: 1;
   min-height: 100vh;
   padding: 1rem;
-  margin-left: 130px;
+  padding-top: -0px;
+  margin-left: 110px;
   transition: margin-left 0.3s ease;
 }
 
 .contentWithCollapsedSidebar {
-  margin-left: 45px;
+  margin-left: 30px;
 }
 
 .contentArea {
   scrollbar-width: none;
   -ms-overflow-style: none;
-  padding-left: 0; 
 }
 
 .contentArea::-webkit-scrollbar {
@@ -31,22 +31,10 @@
 @media (max-width: 767px) {
   .contentArea {
     margin-left: 0;
-    padding-top: 4rem;
-    padding-left: 1rem;
+    padding-bottom: 80px;
   }
 
   .contentWithCollapsedSidebar {
     margin-left: 0;
-  }
-
-  .mobileMenuButton {
-    position: fixed;
-    top: 1rem;
-    left: 1rem;
-    z-index: 110;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   }
 }

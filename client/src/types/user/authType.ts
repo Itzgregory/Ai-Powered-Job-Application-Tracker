@@ -1,8 +1,13 @@
 export interface User {
+  id: string;
   email: string;
-  firstName?: string;
-  lastName?: string;
-  otherName?: string;
+  firstName: string;
+  lastName: string;
+  profilePicture?: string;
+  currentRole?: string;
+  currentCompany?: string;
+  location?: string;
+  jobStatus?: 'ready' | 'open' | 'closed';
 }
 
 export interface AuthState {
@@ -53,4 +58,36 @@ export interface AuthResponse {
     role: string;
     token: string;
   };
+}
+
+export interface ProfileState {
+  data: {
+    id: string;
+    firstName: string;
+    lastName: string;
+    email: string;
+    profilePicture?: string;
+    currentRole?: string;
+    currentCompany?: string;
+    location?: string;
+    jobStatus?: 'ready' | 'open' | 'closed';
+  } | null;
+  loading: boolean;
+  error: string | null;
+  lastUpdated: number | null;
+}
+
+export interface ProfileState {
+  data: User | null;
+  loading: boolean;
+  error: string | null;
+  lastUpdated: number | null;
+}
+
+export interface ProfileSectionProps {
+  user: User | null;
+  loading: boolean;
+  error: string | null;
+  lastUpdated: number | null;
+  handleStatusChange: (newStatus: 'ready' | 'open' | 'closed') => void;
 }

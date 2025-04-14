@@ -39,12 +39,12 @@ const Registration = () => {
   });
 
   return (
-    <div className={`${styles.loginContainer} flex flex-col items-center justify-center h-screen bg-gray-100`}>
-      <h1 className={`${styles.titleDark} text-3xl font-bold mb-6`}>Create an Account</h1>
-      <div className={`${styles.registerCard} bg-white p-6 rounded-lg shadow-md`} style={{ width: "500px" }}>
-        <h2 className={`${styles.title} text-2xl font-bold text-center mb-4`}>Register</h2>
-        {localError && <p className={`${styles.errorText} text-red-500 text-sm text-center mb-4`}>{localError}</p>}
-        <form onSubmit={handleSubmit(onSubmit)} className={`${styles.loginForm} space-y-4`}>
+    <div className={`${styles.loginContainer}`}>
+      <h1 className={`${styles.titleDark}`}>Create an Account</h1>
+      <div className={`${styles.registerCard}`} style={{ width: "500px" }}>
+        <h2 className={`${styles.title}`}>Register</h2>
+        {localError && <p className={`${styles.errorText}`}>{localError}</p>}
+        <form onSubmit={handleSubmit(onSubmit)} className={`${styles.loginForm}`}>
           <div className={styles.formGroup}>
             <div className={styles.inputBox}>
               <input
@@ -156,7 +156,7 @@ const Registration = () => {
                 className="w-4 h-4"
               />
               <span className="text-sm">
-                I agree to the <a href="/terms" className="text-blue-500 hover:underline">terms and conditions</a>.
+                I agree to the <a href="/terms" className="">terms and conditions</a>.
               </span>
             </label>
             {errors.termsAccepted && <p className={styles.invalidFeedback}>{errors.termsAccepted.message}</p>}
@@ -171,7 +171,7 @@ const Registration = () => {
           </button>
         </form>
         <div className="text-center mt-4">
-          <a href="/login" className={`${styles.signupText} text-blue-500 hover:underline`}>
+          <a href="/login" className={`${styles.signupText}`}>
             Already have an account? Login here.
           </a>
         </div>

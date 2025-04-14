@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @font-face {
   font-family: "hollow";
   src: url("/client/src/styles/fonts/Hollow.ttf");
@@ -43,6 +47,8 @@ body {
   font-family: var( --font-family-hollow);
   min-height: 100vh;
   z-index: -1; 
+  width: 100%;
+  overflow-x: hidden;
 }
 .global-button {
   background-color: var(--button-color); 
