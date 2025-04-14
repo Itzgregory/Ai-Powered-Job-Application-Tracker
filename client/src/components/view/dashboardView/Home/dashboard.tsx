@@ -1,11 +1,11 @@
 "use client";
-import { useDashboardData } from "../../container/talentDashboard/useDashboard";
-import IntroSection from "../../view/dashboardView/hero/intro";
-import CurrentStats from "../../view/dashboardView/statsSection/statsSection";
-import JobsSection from "../../view/dashboardView/JobSection/jobSections";
-import InterviewsSection from "../../view/dashboardView/interviewSection/interviewSection";
-import ProfileSection from "../../view/dashboardView/profileSection/profileSection";
-import RecommendatioSvg from "../../view/dashboardView/svg/recommendation";
+import { useDashboardData } from "../../../container/talentDashboard/useDashboard";
+import IntroSection from "./hero/intro";
+import CurrentStats from "./statsSection/statsSection";
+import JobsSection from "./JobSection/jobSections";
+import InterviewsSection from "./interviewSection/interviewSection";
+import ProfileSection from "./profileSection/profileSection";
+import RecommendatioSvg from "./svg/recommendation";
 import Link from "next/link";
 
 export default function Dashboard() {
@@ -92,7 +92,7 @@ export default function Dashboard() {
     <div className="bg-[#FDFDFD] min-h-screen font-cabin text-[#333333] w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <header className="text-left mb-8 md:mb-10">
         <h1 className="font-playfair text-2xl sm:text-3xl md:text-4xl font-semibold text-[#004d40] mb-2">
-          Welcome back,
+          Welcome back!...
         </h1>
         <p className="text-base sm:text-lg text-[#666666]">
           Here's an overview of your job search activity
@@ -106,7 +106,6 @@ export default function Dashboard() {
       </div>
 
       <main className="space-y-6 md:space-y-8">
-        {/* Profile Section */}
         <section className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow p-4 sm:p-6">
           <ProfileSection 
             user={user}
@@ -117,7 +116,10 @@ export default function Dashboard() {
           />
         </section>
 
-        {/* Recommended Jobs */}
+        <section className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow p-4 sm:p-6">
+          <CurrentStats stats={stats} />
+        </section>
+
         <section className="bg-white rounded-lg shadow-sm p-4 sm:p-6">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-4 gap-4">
             <div>
@@ -129,10 +131,9 @@ export default function Dashboard() {
               </p>
             </div>
             <Link 
-              href="/dashboard/jobs" 
-              className="inline-block bg-[#6b4423] text-white px-4 py-2 rounded text-sm sm:text-base font-semibold hover:bg-[#54361a] transition-colors"
-            >
-              Browse Jobs
+              href="/dashboard/profile/edit/preferences"
+              className="text-[#666666] flex justify-end mb-6 md:mb-8">
+              Change job preferences
             </Link>
           </div>
           <div className="p-4 text-center">
@@ -142,6 +143,12 @@ export default function Dashboard() {
                 ? "Here are some job recommendations based on your profile"
                 : "No recommended jobs available at the moment. Complete your profile to get personalized recommendations."}
             </p>
+            <Link 
+              href="/dashboard/jobs" 
+              className="inline-block bg-[#6b4423] text-white px-4 py-2 rounded text-sm sm:text-base font-semibold hover:bg-[#54361a] transition-colors"
+            >
+              Browse Jobs
+            </Link>
             {jobs.length > 0 && (
               <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {jobs.slice(0, 3).map(job => (
@@ -162,25 +169,10 @@ export default function Dashboard() {
           </div>
         </section>
 
-        {/* Main Intro Sections */}
         <section className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow p-4 sm:p-6">
           <IntroSection intros={mainIntroData} />
         </section>
-        
-        {/* Stats Section */}
-        <section className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow p-4 sm:p-6">
-          <CurrentStats stats={stats} />
-        </section>
 
-        {/* Resources Section */}
-        <section className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow p-4 sm:p-6">
-          <h2 className="font-playfair text-xl sm:text-2xl font-semibold text-[#004d40] mb-4">
-            Resources For You
-          </h2>
-          <IntroSection intros={resourcesIntroData} />
-        </section>
-
-        {/* Recent Applications */}
         <section className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow p-4 sm:p-6">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-4 gap-4">
             <h2 className="font-playfair text-xl sm:text-2xl font-semibold text-[#004d40]">
@@ -196,15 +188,6 @@ export default function Dashboard() {
           <JobsSection jobs={appliedJobs.slice(0, 3)} />
         </section>
         
-        {/* Quick Actions */}
-        <section className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow p-4 sm:p-6">
-          <h2 className="font-playfair text-xl sm:text-2xl font-semibold text-[#004d40] mb-4">
-            Quick Actions
-          </h2>
-          <IntroSection intros={quickActionsData} />
-        </section>
-        
-        {/* Upcoming Interviews */}
         <section className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow p-4 sm:p-6">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-4 gap-4">
             <h2 className="font-playfair text-xl sm:text-2xl font-semibold text-[#004d40]">
@@ -218,6 +201,20 @@ export default function Dashboard() {
             </Link>
           </div>
           <InterviewsSection interviews={interviews.filter(interview => interview.status === "upcoming").slice(0, 3)} />
+        </section>
+
+        <section className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow p-4 sm:p-6">
+          <h2 className="font-playfair text-xl sm:text-2xl font-semibold text-[#004d40] mb-4">
+            Quick Actions
+          </h2>
+          <IntroSection intros={quickActionsData} />
+        </section>
+
+        <section className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow p-4 sm:p-6">
+          <h2 className="font-playfair text-xl sm:text-2xl font-semibold text-[#004d40] mb-4">
+            Resources For You
+          </h2>
+          <IntroSection intros={resourcesIntroData} />
         </section>
       </main>
     </div>

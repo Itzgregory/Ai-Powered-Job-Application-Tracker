@@ -12,6 +12,7 @@
   padding-top: -0px;
   margin-left: 110px;
   transition: margin-left 0.3s ease;
+  width: 70%;
 }
 
 .contentWithCollapsedSidebar {
@@ -27,7 +28,6 @@
   display: none;
 }
 
-/* Mobile styles */
 @media (max-width: 767px) {
   .contentArea {
     margin-left: 0;

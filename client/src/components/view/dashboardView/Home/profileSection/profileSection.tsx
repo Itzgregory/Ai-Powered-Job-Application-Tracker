@@ -1,7 +1,7 @@
 'use client';
 import { FaBriefcase, FaMapMarkerAlt, FaEdit, FaExternalLinkAlt, FaChevronDown } from 'react-icons/fa';
 import { useState, useCallback, memo, useEffect, useRef } from 'react';
-import { ProfileSectionProps } from '@/types/user/authType';
+import { ProfileSectionProps } from '../../../../../types/user/authType';
 
 const getInitials = (firstName?: string, lastName?: string) => {
   const first = firstName?.charAt(0)?.toUpperCase() || '';
@@ -30,6 +30,7 @@ const ProfileSection: React.FC<ProfileSectionProps> = memo(({
   lastUpdated, 
   handleStatusChange 
 }) => {
+  const [showStatusTooltip, setShowStatusTooltip] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -78,7 +79,6 @@ const ProfileSection: React.FC<ProfileSectionProps> = memo(({
 
   return (
     <div className="bg-white rounded-lg shadow-md p-4 sm:p-6 relative">
-      {/* Top Right Buttons - Mobile first approach */}
       <div className="absolute top-2 right-2 sm:top-4 sm:right-4 flex gap-2 sm:gap-4">
         <button className="text-[#6b4423] hover:text-[#54361a] flex items-center text-xs sm:text-sm">
           <FaExternalLinkAlt className="mr-1" /> <span className="hidden sm:inline">View public profile</span>
@@ -88,9 +88,8 @@ const ProfileSection: React.FC<ProfileSectionProps> = memo(({
         </button>
       </div>
 
-      {/* Main Profile Content */}
       <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
-        {/* Profile Picture */}
+        
         <div className="flex-shrink-0 self-center sm:self-start">
           {user.profilePicture ? (
             <img
@@ -105,9 +104,7 @@ const ProfileSection: React.FC<ProfileSectionProps> = memo(({
           )}
         </div>
 
-        {/* Profile Details */}
         <div className="flex-1 space-y-2 sm:space-y-4">
-          {/* Name and Update Info - Prioritized for mobile */}
           <div>
             <h2 className="text-xl sm:text-2xl font-bold text-[#004d40] break-words">
               {user.firstName} {user.lastName}
@@ -117,7 +114,7 @@ const ProfileSection: React.FC<ProfileSectionProps> = memo(({
             </p>
           </div>
 
-          {/* Role and Location - Second priority for mobile */}
+          {/* Role and Location */}
           <div className="space-y-1">
             {user.currentRole && (
               <div className="flex items-center text-sm sm:text-base text-[#333333]">
@@ -136,7 +133,6 @@ const ProfileSection: React.FC<ProfileSectionProps> = memo(({
             )}
           </div>
 
-          {/* Job Search Status - Full width on mobile */}
           <div className="mt-4 sm:mt-6">
             <h3 className="font-bold text-sm sm:text-base text-[#333333] mb-1">
               Job search status
@@ -145,7 +141,12 @@ const ProfileSection: React.FC<ProfileSectionProps> = memo(({
               Update your status to inform employers
             </p>
             
-            <div ref={dropdownRef} className="w-full sm:w-[35%] min-w-[200px]">
+            <div 
+              ref={dropdownRef}
+              className="relative w-full sm:w-[35%] min-w-[200px]"
+              onMouseEnter={() => setShowStatusTooltip(true)}
+              onMouseLeave={() => setShowStatusTooltip(false)}
+            >
               <button
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                 className="w-full p-2 sm:p-3 border border-[#E0E0E0] rounded-md bg-white text-left flex justify-between items-center hover:border-[#6b4423] transition-colors"
@@ -157,8 +158,15 @@ const ProfileSection: React.FC<ProfileSectionProps> = memo(({
                 <FaChevronDown className={`text-[#6b4423] transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`} />
               </button>
 
+              {showStatusTooltip && !isDropdownOpen && (
+                <div className="absolute z-10 w-full mt-2 p-3 bg-black text-white text-xs sm:text-sm rounded-md shadow-lg">
+                  <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-b-4 border-l-transparent border-r-transparent border-b-black"></div>
+                  Your status determines how we surface new opportunities to you
+                </div>
+              )}
+
               {isDropdownOpen && (
-                <div className="absolute w-full sm:w-[35%] min-w-[200px] mt-1 border border-[#E0E0E0] rounded-md shadow-lg bg-white z-10">
+                <div className="absolute w-full p-2 sm:w-[35%] min-w-[200px] mt-1 border border-[#E0E0E0] rounded-md shadow-lg bg-white z-10">
                   {statusOptions.map(option => (
                     <div 
                       key={option.value}

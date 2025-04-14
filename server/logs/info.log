@@ -1,0 +1,9 @@
+[2025-04-14 14:20:32] INFO: Database connection established
+[2025-04-14 14:20:32] INFO: Server is listening on port 8080
+[2025-04-14 14:22:20] INFO: [Mongoose] users.findOne {"email":"dev.tester008@gmail.com"} {}
+[2025-04-14 14:22:20] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-04-14 14:22:20] INFO: [Mongoose] users.updateOne {"_id":"67da9b9feb5c288501e77aac","__v":71} {"$set":{"tokens":["eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZGE5YjlmZWI1YzI4ODUwMWU3N2FhYyIsImVtYWlsIjoiZGV2LnRlc3RlcjAwOEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc0NDYzNjk0MCwiZXhwIjoxNzQ0NzIzMzQwfQ.EKUrqAbKYe3YaWAXmJ6m55gLA7kto8s03fLO9Tm_R_4"],"lastLogin":"2025-04-14T13:22:20.511Z","updatedAt":"2025-04-14T13:22:20.516Z"},"$inc":{"__v":1}}
+[2025-04-14 20:52:02] INFO: [Mongoose] users.findOne {"email":"dev.tester008@gmail.com"} {}
+[2025-04-14 20:52:02] INFO: [Mongoose] users.updateOne {"_id":"67da9b9feb5c288501e77aac","__v":72} {"$set":{"tokens":["eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZGE5YjlmZWI1YzI4ODUwMWU3N2FhYyIsImVtYWlsIjoiZGV2LnRlc3RlcjAwOEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc0NDY2MDMyMiwiZXhwIjoxNzQ0NzQ2NzIyfQ.qiiyp8cf_qgyVt7XaOLjitv5VMdGyLjdjhgeD3dpeFg"],"lastLogin":"2025-04-14T19:52:02.870Z","updatedAt":"2025-04-14T19:52:02.872Z"},"$inc":{"__v":1}}
+[2025-04-14 21:17:29] INFO: MongoDB disconnected. Attempting to reconnect...
+[2025-04-14 21:17:34] INFO: Successfully connected to MongoDB

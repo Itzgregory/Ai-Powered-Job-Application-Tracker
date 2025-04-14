@@ -1,5 +1,5 @@
 import React from "react";
-import { AppliedJob } from "@/types/jobs/jobTypes";
+import { AppliedJob } from "../../../../../types/jobs/jobTypes";
 // import styles from "../GeneralStyles.module.css";
 
 interface JobsSectionProps {

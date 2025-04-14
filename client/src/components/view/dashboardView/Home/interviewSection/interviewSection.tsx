@@ -1,6 +1,5 @@
 import React from "react";
-import { Interview } from "@/types/jobs/jobTypes";
-// import styles from "../GeneralStyles.module.css";
+import { Interview } from "../../../../../types/jobs/jobTypes";
 
 interface InterviewsSectionProps {
   interviews: Interview[];

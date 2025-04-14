@@ -1,5 +1,5 @@
 import TalentDashboardLayout from "@/app/talentdashboard/layout";
-import Dashboard from "@/components/view/dashboardView/dashboard";
+import Dashboard from "../../components/view/dashboardView/Home/dashboard";
 
 export default function TalentDashboard() {
   return (
