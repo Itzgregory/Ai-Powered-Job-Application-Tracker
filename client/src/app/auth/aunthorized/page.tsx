@@ -1,4 +1,4 @@
-import Unauthorized from "@/components/view/auntorized/authorized";
+import Unauthorized from "@/features/auntorized/authorized";
 
 
 export default function Home() {

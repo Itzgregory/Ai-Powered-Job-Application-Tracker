@@ -1,11 +1,11 @@
 import TalentDashboardLayout from "@/app/talentdashboard/layout";
-import Dashboard from "../../components/view/dashboardView/Home/dashboard";
+import DashboardHome from "../../features/dashboardView/components/Home/dashboardHome";
 
-export default function TalentDashboard() {
+export default function TalentDashboardHome() {
   return (
     <TalentDashboardLayout>
       <div className="parent-page">
-        <Dashboard />
+        <DashboardHome />
       </div>
     </TalentDashboardLayout>
   );

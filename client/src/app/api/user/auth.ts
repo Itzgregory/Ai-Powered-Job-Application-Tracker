@@ -1,7 +1,7 @@
 // src/app/api/user/auth.ts
 import axiosInstance from "@/utils/axios/axiosInstance";
 import { capitalizeFirstLetter } from "@/utils/formating/cases";
-import { User, RegistrationFormData, LoginFormData } from "@/types/user/authType";
+import { User, RegistrationFormData, LoginFormData } from "@/types/user/auth.type";
 
 export const registerUser = async (data: RegistrationFormData): Promise<void> => {
   try {

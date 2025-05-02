@@ -1,4 +1,4 @@
-import Registration from "@/components/view/register/register";
+import Registration from "@/features/register/components/register";
 
 export default function Register() {
     return (

@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
-import Header from "@/components/view/header/Header";
-import Footer from "@/components/view/footer/Footer";
+import Header from "@/features/header/Header";
+import Footer from "@/features/footer/Footer";
 import { Providers } from "@/redux/store/providers";
 import "@/styles/globals.css";
 

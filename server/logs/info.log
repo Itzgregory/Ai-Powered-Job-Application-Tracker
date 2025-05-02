@@ -7,3 +7,17 @@
 [2025-04-14 20:52:02] INFO: [Mongoose] users.updateOne {"_id":"67da9b9feb5c288501e77aac","__v":72} {"$set":{"tokens":["eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZGE5YjlmZWI1YzI4ODUwMWU3N2FhYyIsImVtYWlsIjoiZGV2LnRlc3RlcjAwOEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc0NDY2MDMyMiwiZXhwIjoxNzQ0NzQ2NzIyfQ.qiiyp8cf_qgyVt7XaOLjitv5VMdGyLjdjhgeD3dpeFg"],"lastLogin":"2025-04-14T19:52:02.870Z","updatedAt":"2025-04-14T19:52:02.872Z"},"$inc":{"__v":1}}
 [2025-04-14 21:17:29] INFO: MongoDB disconnected. Attempting to reconnect...
 [2025-04-14 21:17:34] INFO: Successfully connected to MongoDB
+[2025-05-01 19:10:11] INFO: Database connection established
+[2025-05-01 19:10:11] INFO: Server is listening on port 8080
+[2025-05-01 19:12:10] INFO: [Mongoose] users.findOne {"email":"dev.tester008@gmail.com"} {}
+[2025-05-01 19:12:10] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-01 19:12:11] INFO: [Mongoose] users.updateOne {"_id":"67da9b9feb5c288501e77aac","__v":73} {"$set":{"tokens":["eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZGE5YjlmZWI1YzI4ODUwMWU3N2FhYyIsImVtYWlsIjoiZGV2LnRlc3RlcjAwOEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc0NjEyMzEzMSwiZXhwIjoxNzQ2MjA5NTMxfQ.JPC7FlJ5wDr0H8ugnKPs9MsWD1ZUqRTcxFKrDjgZY3w"],"lastLogin":"2025-05-01T18:12:11.512Z","updatedAt":"2025-05-01T18:12:11.523Z"},"$inc":{"__v":1}}
+[2025-05-02 14:55:19] INFO: Database connection established
+[2025-05-02 14:55:19] INFO: Server is listening on port 8080
+[2025-05-02 15:06:45] INFO: [Mongoose] users.findOne {"email":"dev.tester008@gmail.com"} {}
+[2025-05-02 15:06:45] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-02 15:06:45] INFO: [Mongoose] users.updateOne {"_id":"67da9b9feb5c288501e77aac","__v":74} {"$set":{"tokens":["eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZGE5YjlmZWI1YzI4ODUwMWU3N2FhYyIsImVtYWlsIjoiZGV2LnRlc3RlcjAwOEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc0NjE5NDgwNSwiZXhwIjoxNzQ2MjgxMjA1fQ.1lSX4sYftQa0McyU-n0CQ1ROJyfj5tXfBmDH0okAl3U"],"lastLogin":"2025-05-02T14:06:45.481Z","updatedAt":"2025-05-02T14:06:45.489Z"},"$inc":{"__v":1}}
+[2025-05-02 16:46:10] INFO: [Mongoose] users.findOne {"email":"dev.tester008@gmail.com"} {}
+[2025-05-02 16:46:11] INFO: [Mongoose] users.updateOne {"_id":"67da9b9feb5c288501e77aac","__v":75} {"$set":{"tokens":["eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZGE5YjlmZWI1YzI4ODUwMWU3N2FhYyIsImVtYWlsIjoiZGV2LnRlc3RlcjAwOEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc0NjIwMDc3MSwiZXhwIjoxNzQ2Mjg3MTcxfQ.eERZXvBMwch4Ow49AawhtOw12OA1lE9tsXuJiw5p9kY"],"lastLogin":"2025-05-02T15:46:11.268Z","updatedAt":"2025-05-02T15:46:11.273Z"},"$inc":{"__v":1}}
+[2025-05-02 17:06:26] INFO: [Mongoose] users.findOne {"email":"dev.tester008@gmail.com"} {}
+[2025-05-02 17:06:26] INFO: [Mongoose] users.updateOne {"_id":"67da9b9feb5c288501e77aac","__v":76} {"$set":{"tokens":["eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZGE5YjlmZWI1YzI4ODUwMWU3N2FhYyIsImVtYWlsIjoiZGV2LnRlc3RlcjAwOEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc0NjIwMTk4NiwiZXhwIjoxNzQ2Mjg4Mzg2fQ.sQDscBmaTZ9ZYYphxGMdldhTQvmk_-MDiVvEyUPV9Z0"],"lastLogin":"2025-05-02T16:06:26.703Z","updatedAt":"2025-05-02T16:06:26.705Z"},"$inc":{"__v":1}}

@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import Sidebar from "../../components/view/talentMenu/sidebar";
+import Sidebar from "@/features/dashboardView/components/talentMenu/sidebar";
 import { isTokenValid } from "@/utils/auth/authutils";
 import styles from "./TalentDashboardLayout.module.css";
 

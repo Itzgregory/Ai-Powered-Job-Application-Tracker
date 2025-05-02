@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { fetchUserDetails } from '@/app/api/user/auth';
 import { getUserDetails } from '@/utils/auth/authutils';
-import { ProfileState } from '@/types/user/authType';
+import { ProfileState } from '@/types/user/auth.type';
 
 interface ProfileError {
     error: string;

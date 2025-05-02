@@ -1,11 +1,15 @@
-import ComingSoon from "@/components/view/comingSoon/comingSoon";
+import TalentDashboardLayout from "@/app/talentdashboard/layout";
+import DashboardProfile from "../../../features/dashboardView/components/profile/dashboardProfile";
+  
 
-
-export default function Clients() {
+export default function TalentDashboardProfile() {
     return (
+      <TalentDashboardLayout>
         <div className="parent-page">
-            <h1>Welcome to the clients page </h1>
-            <ComingSoon />
+          <DashboardProfile />
         </div>
+      </TalentDashboardLayout>
     );
-}
+  }
+  
+
