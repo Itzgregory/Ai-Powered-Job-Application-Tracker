@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import useRegistration from "../hooks/registerContainer/useRegister";
-import styles from "../login/Login.module.css";
+import styles from "../../login/components/Login.module.css";
 import { useRouter } from "next/navigation";
 
 type RegistrationFormData = {
@@ -164,7 +164,7 @@ const Registration = () => {
 
           <button
             type="submit"
-            className={`${styles.submitButton} global-button`}
+            className={`${styles.submitButton} global-button items-center`}
             disabled={loading}
           >
             {loading ? "Registering..." : "Register"}

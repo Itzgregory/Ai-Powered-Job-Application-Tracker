@@ -142,8 +142,20 @@
 .sideMenuHeader {
     width: 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between; 
+    align-items: center;
     padding: 1rem;
+}
+
+
+.sideMenuHeader .brand {
+    margin-left: 0;
+    margin-right: auto; 
+}
+
+.closeButton {
+    margin-left: auto; 
+    margin-right: 5px;
 }
 
 .closeButton {

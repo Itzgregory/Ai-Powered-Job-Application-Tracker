@@ -35,6 +35,7 @@
   --font-family-hollow: 'hollow';
   --font-family-oswald: 'oswald';
   --font-family-cabin: 'cabin';
+  --count-cart-bg: black;
 }
 
 body {
