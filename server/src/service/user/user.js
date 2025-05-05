@@ -12,7 +12,7 @@ class UserService {
     async authenticateUser(email, password) {
         try {
             if (!email || !password) {
-                return { status: 400, success: false, message: 'Provide email and password', data: null };
+                return { status: 400, success: false, message: 'Provide email and password',  data: {} || null, };
             }
 
             const normalizedEmail = email.trim().toLowerCase();
@@ -22,13 +22,13 @@ class UserService {
 
             if (!user) {
                 logerror.error('User not found:', email);
-                return { status: 401, success: false, message: 'Invalid credentials', data: null };
+                return { status: 401, success: false, message: 'Invalid credentials',  data: {} || null, };
             }
 
             const isValidPassword = await this.securityConfig.verifyPassword(user.password, password);
             if (!isValidPassword) {
                 logerror.error('Invalid password for user:', email);
-                return { status: 401, success: false, message: 'Invalid credentials', data: null };
+                return { status: 401, success: false, message: 'Invalid credentials',  data: {} || null, };
             }
 
             let accessToken;
@@ -36,7 +36,7 @@ class UserService {
                 accessToken = await generateNormalToken(user);
             } catch (tokenError) {
                 logerror.error('Error generating token:', tokenError);
-                return { status: 500, success: false, message: 'Token generation failed', data: null };
+                return { status: 500, success: false, message: 'Token generation failed',  data: {} || null, };
             }
 
             user.tokens = [accessToken];
@@ -46,7 +46,7 @@ class UserService {
                 await user.save();
             } catch (saveError) {
                 logerror.error('Error saving user:', saveError);
-                return { status: 500, success: false, message: 'Database update failed', data: null };
+                return { status: 500, success: false, message: 'Database update failed',  data: {} || null, };
             }
 
             return {
@@ -65,7 +65,7 @@ class UserService {
             };
         } catch (err) {
             logerror.error('Unexpected error authenticating user:', err);
-            return { status: 500, success: false, message: 'Authentication failed', data: null };
+            return { status: 500, success: false, message: 'Authentication failed',  data: {} || null, };
         }
     }
 
@@ -78,7 +78,7 @@ class UserService {
             });
 
             if (existingUser) {
-                return { status: 409, success: false, message: 'User already exists', data: null };
+                return { status: 409, success: false, message: 'User already exists',  data: {} || null, };
             }
 
             const hashedPassword = await this.securityConfig.hashPassword(userData.password);
@@ -99,28 +99,28 @@ class UserService {
             return { status: 201, success: true, message: 'User registered successfully', data: userResponse };
         } catch (err) {
             logerror.error('Error registering user:', err);
-            return { status: 500, success: false, message: 'Registration failed', data: null };
+            return { status: 500, success: false, message: 'Registration failed',  data: {} || null, };
         }
     }
 
     async logoutUser(accessToken) {
         try {
             if (!accessToken) {
-                return { status: 400, success: false, message: 'No token provided', data: null };
+                return { status: 400, success: false, message: 'No token provided',  data: {} || null, };
             }
 
             const user = await this.getUserModel.findOne({ tokens: accessToken });
             if (!user) {
-                return { status: 401, success: false, message: 'Invalid token', data: null };
+                return { status: 401, success: false, message: 'Invalid token',  data: {} || null, };
             }
 
             user.tokens = user.tokens.filter(token => token !== accessToken);
             await user.save();
 
-            return { status: 200, success: true, message: 'Logout successful', data: null };
+            return { status: 200, success: true, message: 'Logout successful',  data: {} || null, };
         } catch (err) {
             logerror.error('Error logging out user:', err);
-            return { status: 500, success: false, message: 'Logout failed', data: null };
+            return { status: 500, success: false, message: 'Logout failed',  data: {} || null, };
         }
     }
 
@@ -128,13 +128,13 @@ class UserService {
         try {
             const user = await this.getUserModel.findById(userId).select('-password -tokens');
             if (!user) {
-                return { status: 404, success: false, message: 'User not found', data: null };
+                return { status: 404, success: false, message: 'User not found',  data: {} || null, };
             }
 
             return { status: 200, success: true, message: 'User profile retrieved', data: user };
         } catch (err) {
             logerror.error('Get profile error:', err);
-            return { status: 500, success: false, message: 'Failed to get user profile', data: null };
+            return { status: 500, success: false, message: 'Failed to get user profile',  data: {} || null, };
         }
     }
 
@@ -144,7 +144,7 @@ class UserService {
             const user = await User.findById(userId);
 
             if (!user) {
-                return { status: 404, success: false, message: "User not found", data: null };
+                return { status: 404, success: false, message: "User not found",  data: {} || null, };
             }
 
             Object.assign(user, updateData);
@@ -156,7 +156,7 @@ class UserService {
             return { status: 200, success: true, message: "Profile updated successfully", data: user };
         } catch (err) {
             logerror.error("Error updating profile:", err);
-            return { status: 500, success: false, message: "Profile update failed", data: null };
+            return { status: 500, success: false, message: "Profile update failed",  data: {} || null, };
         }
     }
 }

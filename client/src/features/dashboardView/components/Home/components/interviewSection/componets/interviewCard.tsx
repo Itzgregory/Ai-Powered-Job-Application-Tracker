@@ -6,14 +6,14 @@ const InterviewCard: React.FC<{ interview: Interview }> = ({ interview }) => (
   <div className="bg-white p-4 rounded-lg shadow-md">
     <div className="flex justify-between items-start">
       <div>
-        <h3 className="font-semibold text-lg text-gray-800">{interview.job.title}</h3>
-        <p className="text-gray-600 text-sm">{interview.job.company}</p>
+        <h3 className="font-semibold text-lg text-[--text-color-grey]-800">{interview.job.title}</h3>
+        <p className="text-[--text-color-grey]-600 text-sm">{interview.job.company}</p>
         <div className="flex items-center mt-2">
           <span className={`mr-2 px-2 py-1 rounded-full text-xs font-medium ${interview.mode === 'virtual' ? 'bg-purple-100 text-purple-800' : 'bg-blue-100 text-blue-800'}`}>
             {interview.mode}
           </span>
           {interview.location && (
-            <span className="text-xs text-gray-500">{interview.location}</span>
+            <span className="text-xs text-[--text-color-grey]-500">{interview.location}</span>
           )}
         </div>
       </div>

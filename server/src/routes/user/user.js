@@ -12,7 +12,6 @@ module.exports = routerUsers = () => {
         .get('/user/:id', authMiddleware, userControllerInstance.getLoggedUser) 
         .post('/signup', userControllerInstance.postSignup) 
         .post('/logout', authMiddleware, userControllerInstance.logoutUser)
-        .patch('/profile', authMiddleware, userControllerInstance.updateUserProfile);
      
     return router;
 }

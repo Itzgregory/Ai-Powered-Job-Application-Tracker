@@ -20,7 +20,7 @@ const authMiddleware = asyncHandler(async (req, res, next) => {
         return res.status(401).json({
             success: false,
             message: 'Not authenticated: No token provided',
-            data: null,
+            data: {} || null
         });
     }
 
@@ -39,20 +39,20 @@ const authMiddleware = asyncHandler(async (req, res, next) => {
             return res.status(401).json({
                 success: false,
                 message: 'Not Authorized: Token is expired. Please login again',
-                data: null,
+                data: {} || null
             });
         }
         if (error instanceof jwt.JsonWebTokenError) {
             return res.status(401).json({
                 success: false,
                 message: 'Invalid or expired token',
-                data: null,
+                data: {} || null
             });
         }
         return res.status(500).json({
             success: false,
             message: 'Internal server error',
-            data: null,
+            data: {} || null
         });
     }
 });

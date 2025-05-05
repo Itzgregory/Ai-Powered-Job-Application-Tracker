@@ -18,7 +18,8 @@
 }
 
 :root {
-  --primary-color: #004d40; 
+  --primary-color: #181717dc;
+  --primary-colorr:  #3a4f41; 
   --secondary-color: #FDFDFD; 
   --background-color: #ffffff;
   --button-color: #6b4423;
@@ -26,6 +27,7 @@
   --button-color-active: #3e2812; 
   --button-text: #FDFDFD; 
   --text-color: #333333;
+  --text-color-grey: #666666;
   --page-background: #FDFDFD;
   --hover-color: #C0A080; 
   --shadow-color: rgba(0, 0, 0, 0.1); 
@@ -36,7 +38,10 @@
   --font-family-oswald: 'oswald';
   --font-family-cabin: 'cabin';
   --count-cart-bg: black;
+  --primary-hoverr: #e8f3ff;
+  --primary-hover: #506b5a;
 }
+
 
 body {
   background-image: url('/client/public/asset/background.jpeg') !important; 
@@ -87,4 +92,22 @@ body {
   padding: 2rem;
   min-height: 100vh;
   box-shadow: 0 6px 12px var(--shadow-color); 
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari and Opera */
+}
+
+.last-two{
+  align-items: end;
+  margin-left: auto;
+}
+
+.last-two Link :first-child{
+  margin-left: auto;
 }

@@ -4,7 +4,7 @@ import Link from "next/link";
 export const RecentApplicationsSection = ({ appliedJobs }: { appliedJobs: any[] }) => (
     <section className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow p-4 sm:p-6">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-4 gap-4">
-        <h2 className="font-playfair text-xl sm:text-2xl font-semibold text-[#004d40]">
+        <h2 className="font-playfair text-xl sm:text-2xl font-semibold text-[--primary-color]">
           Recent Applications
         </h2>
         <Link 

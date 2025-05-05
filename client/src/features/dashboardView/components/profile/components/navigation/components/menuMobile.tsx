@@ -1,47 +1,54 @@
 'use client';
-import { useState } from 'react';
 import Link from 'next/link';
 import { menuItems } from '../utills/menuItem';
 import { useActiveMenu } from '../hooks/useActiveMenu';
-import { Menu, X } from 'lucide-react';
 
 export function MobileNav() {
-    const [isOpen, setIsOpen] = useState(false);
-    const activeMenu = useActiveMenu();
-  
-    return (
-      <div className="md:hidden">
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="p-2 text-gray-700 hover:text-gray-900 transition-colors"
-          aria-expanded={isOpen}
-        >
-          {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-        </button>
-  
-        {isOpen && (
-          <div className="absolute left-0 right-0 top-16 bg-white shadow-lg z-50 animate-in fade-in">
-            <nav className="px-4 py-3">
-              <ul className="space-y-2">
-                {menuItems.map((item) => (
-                  <li key={item.id}>
-                    <Link
-                      href={item.href}
-                      className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
-                        activeMenu === item.id
-                          ? 'bg-primary-50 text-primary-600'
-                          : 'text-gray-700 hover:bg-gray-50'
-                      }`}
-                      onClick={() => setIsOpen(false)}
-                    >
-                      {item.title}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </nav>
+  const activeMenu = useActiveMenu();
+  const regularItems = menuItems.slice(0, -2); 
+  const lastTwoItems = menuItems.slice(-2); 
+
+  return (
+    <div className="lg:hidden w-full max-w-full mx-0 px-0">
+      <div className="relative">
+        <div className="flex overflow-x-auto pb-2 hide-scrollbar gap-2 px-0 w-full">
+          {regularItems.map((item) => (
+            <Link
+              key={item.id}
+              href={item.href}
+              className={`
+                flex-shrink-0 px-4 py-2 text-sm font-medium transition-colors
+                border border-[var(--button-color)] rounded-md
+                text-[var(--button-color)] 
+                hover:bg-[var(--hover-color)] hover:text-[var(--button-text)]
+                ${activeMenu === item.id ? 'font-bold underline text-[ --button-text] bg-[var(--hover-color)]' : ''}
+              `}
+            >
+              {item.title}
+            </Link>
+          ))}
+          <div className="flex-grow"></div>
+          <div className="flex gap-2 flex-shrink-0">
+            {lastTwoItems.map((item) => (
+              <Link
+                key={item.id}
+                href={item.href}
+                id={item.id}
+                className={`
+                  flex-shrink-0 px-4 py-2 text-sm font-medium transition-colors
+                  border border-[var(--primary-color)] rounded-md
+                  bg-[var(--primary-color)] text-[var(--button-text)] 
+                  hover:bg-[var(--primary-hover)] hover:text-[var(--primary-color)]
+                  ${activeMenu === item.id ? 'font-bold bg-[var(--primary-hover)]' : ''}
+                `}
+              >
+                {item.title}
+            </Link>
+            ))}
           </div>
-        )}
+        </div>
+        <div className="absolute bottom-0 left-0 right-0 h-1 bg-gray-100 opacity-30"></div>
       </div>
-    );
-  }
+    </div>
+  );
+}

@@ -10,7 +10,7 @@ interface ProfileHeaderProps {
 
 const ProfileHeader: React.FC<ProfileHeaderProps> = ({ user, lastUpdated }) => (
     <div>
-      <h2 className="text-xl sm:text-2xl font-bold text-[#004d40] break-words">
+      <h2 className="text-xl sm:text-2xl font-bold text-[--primary-color] break-words">
         {user.firstName} {user.lastName}
       </h2>
       <p className="text-xs sm:text-sm text-gray-500">

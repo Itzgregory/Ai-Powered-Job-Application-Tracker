@@ -10,7 +10,7 @@ export const menuItems: MenuItem[] = [
   {
     id: 'menu-item-2',
     title: 'Profile',
-    href: '/talentdashboard/profile/edit/',
+    href: '/talentdashboard/profile/',
   },
 
   {

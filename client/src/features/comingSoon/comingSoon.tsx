@@ -54,8 +54,9 @@ const ComingSoon = () => {
           src={developerAnimation}
           alt="Developer at work"
           className={styles.image}
-          width={500}
-          height={500}
+          width={0} 
+          height={0}
+          sizes="100vw" 
           priority
         />
       </motion.div>

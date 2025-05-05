@@ -10,7 +10,7 @@ const userControllers = () => {
                     return res.status(400).json({
                         success: false,
                         message: error.details.map(err => err.message).join(', '),
-                        data: null,
+                        data: {} || null,
                     });
                 }
         
@@ -34,7 +34,7 @@ const userControllers = () => {
                 return res.status(500).json({ 
                     success: false,
                     message: 'Internal server error',
-                    data: null,
+                    data: {} || null,
                 });
             }
         },
@@ -46,7 +46,7 @@ const userControllers = () => {
                     return res.status(400).json({
                         success: false,
                         message: error.details.map(err => err.message).join(', '),
-                        data: null,
+                        data: {} || null,
                     });
                 }
         
@@ -61,7 +61,7 @@ const userControllers = () => {
                 return res.status(500).json({
                     success: false,
                     message: 'Internal server error',
-                    data: null,
+                    data: {} || null,
                 });
             }
         },
@@ -101,7 +101,7 @@ const userControllers = () => {
                     return res.status(400).json({
                         success: false,
                         message: error.details.map(err => err.message).join(", "),
-                        data: null,
+                        data: {} || null,
                     });
                 }
 
@@ -111,7 +111,7 @@ const userControllers = () => {
                 return res.status(500).json({
                     success: false,
                     message: "Internal server error",
-                    data: null,
+                    data: {} || null,
                 });
             }
         }

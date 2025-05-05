@@ -9,7 +9,7 @@ export default function RecommendedJobsSection({
     <section className="bg-white rounded-lg shadow-sm p-4 sm:p-6">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-4 gap-4">
         <div>
-          <h2 className="font-playfair text-xl sm:text-2xl font-semibold text-[#004d40] mb-1">
+          <h2 className="font-playfair text-xl sm:text-2xl font-semibold text-[--primary-color] mb-1">
             Recommended Jobs
           </h2>
           <p className="text-[#666666]">

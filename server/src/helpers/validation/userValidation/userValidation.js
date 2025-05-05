@@ -56,25 +56,6 @@ const userValidation = {
                 'string.empty': 'Password cannot be empty',
         }),
     }).unknown(false),
-
-    updateProfileSchema: () => Joi.object({
-        firstName: Joi.string().optional().messages({
-            'string.empty': 'First name cannot be empty',
-        }),
-        lastName: Joi.string().optional().messages({
-            'string.empty': 'Last name cannot be empty',
-        }),
-        otherName: Joi.string().optional().messages({}),
-        email: Joi.string().email().optional().messages({
-            'string.email': 'Invalid email format'
-        }),
-        username: Joi.string().optional().messages({
-            'string.empty': 'Username cannot be empty'
-        }),
-        phoneNumber: Joi.string().optional().messages({
-            'string.empty': 'Phone number cannot be empty'
-        })
-    }).unknown(false)
 };
 
 module.exports = { userValidation, formatValidationResponse };
