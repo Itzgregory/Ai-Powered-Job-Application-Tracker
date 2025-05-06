@@ -1,6 +1,7 @@
-export interface Profile {
+export interface ProfileFormData {
     id: string;
-    name: string;
+    firstName: string;
+    lastName: string;
     avatar?: string;
     location: string;
     primaryRole: { value: string; label: string };

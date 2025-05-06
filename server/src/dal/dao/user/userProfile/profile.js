@@ -36,4 +36,44 @@ const createProfileDao = async (userId, profileData) => {
   }
 };
 
-module.exports = { createProfileDao };
+
+const getProfileDao = async (id) => {
+  try {
+
+    const user = await User.findById(id).select('profile skills firstName lastName');
+    
+    if (!user) {
+      logger.error('User not found', { id });
+      throw new AppError('User not found', 404);
+    }
+
+    if (!user.profile || user.profile.length === 0) {
+      logger.info('No profile found for user, returning empty array', { id });
+      return [];
+    }
+
+    const latestProfile = user.profile[user.profile.length - 1];
+
+    const response = {
+      // spread and convert mongoose document to plain object
+      ...latestProfile.toObject(), 
+      skills: user.skills.toObject() || [], 
+      firstName: user.firstName || '', 
+      lastName: user.lastName || '' 
+    };
+
+    return response;
+  } catch (error) {
+    if (error instanceof AppError) {
+      throw error;
+    }
+    logger.error('Error fetching profile in DAO', {
+      error: error.message,
+      stack: error.stack,
+      userId
+    });
+    throw new AppError('Failed to fetch profile due to database error', 500);
+  }
+};
+
+module.exports = { createProfileDao, getProfileDao };

@@ -11,17 +11,14 @@ const userProfileSchema = new mongoose.Schema({
     type: String,
   },
   primaryRole: {
-    value: { type: String },
-    label: { type: String }
+    type: String
   },
   yearsExperience: {
-    value: { type: String },
-    label: { type: String }
+    type: String
   },
   roles: [
     {
-      value: { type: String },
-      label: { type: String }
+      type: String
     }
   ],
   bio: {
@@ -58,12 +55,10 @@ const userProfileSchema = new mongoose.Schema({
     type: String
   },
   pronouns: {
-    value: { type: String },
-    label: { type: String }
+    type: String
   },
   gender: {
-    value: { type: String },
-    label: { type: String }
+    type: String
   },
   raceEthnicity: [
     {

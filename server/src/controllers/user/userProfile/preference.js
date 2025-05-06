@@ -1,6 +1,7 @@
-const { createPreferenceService } = require('../../../service/user/userProfile/preference');
+const { createPreferenceService, getPreferenceService } = require('../../../service/user/userProfile/preference');
 const { preferenceValidation, formatErrorResponse } = require('../../../helpers/validation/userValidation/preferenceValidation');
 const { logger } = require('../../../helpers/logger');
+const validateMongoDbId = require("../../../helpers/validation/validateMongoDbId/validateMongoDbid");
 
 
 const getPreferenceMappingsController = async (req, res, next) => {
@@ -42,4 +43,34 @@ const createPreferenceController = async (req, res, next) => {
   }
 };
 
-module.exports = { getPreferenceMappingsController, createPreferenceController };
+const getPreferenceController = async (req, res, next) => {
+  try {
+    if (!req.user?.id) {
+      logger.error('No user ID found in token', { headers: req.headers });
+      throw new AppError('Unauthorized: No user ID in token', 401);
+    }
+
+    const id = req.user.id;
+
+    validateMongoDbId(id);
+
+    logger.info('Fetching preference for user', { userId: id });
+    const response = await getPreferenceService(id);
+    
+    res.status(200).json({
+      success: response.success,
+      message: response.message,
+      data: response.data
+    });
+  } catch (error) {
+    logger.error('Error fetching preference in controller', {
+      error: error.message,
+      stack: error.stack,
+      userId: req.user?.id,
+      errorName: error.name
+    });
+    next(error);
+  }
+};
+
+module.exports = { getPreferenceMappingsController, createPreferenceController, getPreferenceController };

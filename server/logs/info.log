@@ -1,0 +1,629 @@
+[2025-05-06 16:59:24] INFO: Database connection established
+[2025-05-06 16:59:24] INFO: Server is listening on port 8080
+[2025-05-06 16:59:24] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 16:59:58] INFO: Database connection established
+[2025-05-06 16:59:58] INFO: Server is listening on port 8080
+[2025-05-06 16:59:58] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:02:13] INFO: Database connection established
+[2025-05-06 17:02:13] INFO: Server is listening on port 8080
+[2025-05-06 17:02:13] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:02:27] INFO: Database connection established
+[2025-05-06 17:02:27] INFO: Server is listening on port 8080
+[2025-05-06 17:02:27] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:02:32] INFO: Database connection established
+[2025-05-06 17:02:32] INFO: Server is listening on port 8080
+[2025-05-06 17:02:32] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:03:20] INFO: Database connection established
+[2025-05-06 17:03:20] INFO: Server is listening on port 8080
+[2025-05-06 17:03:20] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:03:40] INFO: Database connection established
+[2025-05-06 17:03:40] INFO: Server is listening on port 8080
+[2025-05-06 17:03:40] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:04:23] INFO: Database connection established
+[2025-05-06 17:04:23] INFO: Server is listening on port 8080
+[2025-05-06 17:04:23] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:04:36] INFO: Database connection established
+[2025-05-06 17:04:36] INFO: Server is listening on port 8080
+[2025-05-06 17:04:36] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:05:02] INFO: Database connection established
+[2025-05-06 17:05:02] INFO: Server is listening on port 8080
+[2025-05-06 17:05:02] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:05:50] INFO: Database connection established
+[2025-05-06 17:05:50] INFO: Server is listening on port 8080
+[2025-05-06 17:05:50] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:06:17] INFO: Database connection established
+[2025-05-06 17:06:17] INFO: Server is listening on port 8080
+[2025-05-06 17:06:17] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:09:13] INFO: Database connection established
+[2025-05-06 17:09:13] INFO: Server is listening on port 8080
+[2025-05-06 17:09:13] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:09:48] INFO: Database connection established
+[2025-05-06 17:09:48] INFO: Server is listening on port 8080
+[2025-05-06 17:09:48] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:09:55] INFO: Database connection established
+[2025-05-06 17:09:55] INFO: Server is listening on port 8080
+[2025-05-06 17:09:55] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:10:06] INFO: Database connection established
+[2025-05-06 17:10:06] INFO: Server is listening on port 8080
+[2025-05-06 17:10:06] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:10:28] INFO: Database connection established
+[2025-05-06 17:10:28] INFO: Server is listening on port 8080
+[2025-05-06 17:10:28] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:10:39] INFO: Database connection established
+[2025-05-06 17:10:39] INFO: Server is listening on port 8080
+[2025-05-06 17:10:39] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:14:57] INFO: Database connection established
+[2025-05-06 17:14:57] INFO: Server is listening on port 8080
+[2025-05-06 17:14:57] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:15:04] INFO: Database connection established
+[2025-05-06 17:15:04] INFO: Server is listening on port 8080
+[2025-05-06 17:15:04] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:15:24] INFO: Database connection established
+[2025-05-06 17:15:24] INFO: Server is listening on port 8080
+[2025-05-06 17:15:24] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:15:29] INFO: Database connection established
+[2025-05-06 17:15:29] INFO: Server is listening on port 8080
+[2025-05-06 17:15:29] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:15:39] INFO: Database connection established
+[2025-05-06 17:15:39] INFO: Server is listening on port 8080
+[2025-05-06 17:15:39] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:23:42] INFO: Database connection established
+[2025-05-06 17:23:42] INFO: Server is listening on port 8080
+[2025-05-06 17:23:42] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:23:50] INFO: Database connection established
+[2025-05-06 17:23:50] INFO: Server is listening on port 8080
+[2025-05-06 17:23:50] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:24:22] INFO: Database connection established
+[2025-05-06 17:24:22] INFO: Server is listening on port 8080
+[2025-05-06 17:24:22] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:24:40] INFO: Database connection established
+[2025-05-06 17:24:40] INFO: Server is listening on port 8080
+[2025-05-06 17:24:40] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:24:49] INFO: Database connection established
+[2025-05-06 17:24:49] INFO: Server is listening on port 8080
+[2025-05-06 17:24:49] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:25:00] INFO: Database connection established
+[2025-05-06 17:25:00] INFO: Server is listening on port 8080
+[2025-05-06 17:25:00] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:25:34] INFO: Database connection established
+[2025-05-06 17:25:34] INFO: Server is listening on port 8080
+[2025-05-06 17:25:34] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:26:30] INFO: Database connection established
+[2025-05-06 17:26:30] INFO: Server is listening on port 8080
+[2025-05-06 17:26:30] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:26:44] INFO: Database connection established
+[2025-05-06 17:26:44] INFO: Server is listening on port 8080
+[2025-05-06 17:26:44] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:26:55] INFO: Database connection established
+[2025-05-06 17:26:55] INFO: Server is listening on port 8080
+[2025-05-06 17:26:55] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:27:00] INFO: Database connection established
+[2025-05-06 17:27:00] INFO: Server is listening on port 8080
+[2025-05-06 17:27:00] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:27:03] INFO: Database connection established
+[2025-05-06 17:27:04] INFO: Server is listening on port 8080
+[2025-05-06 17:27:04] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:27:07] INFO: Database connection established
+[2025-05-06 17:27:07] INFO: Server is listening on port 8080
+[2025-05-06 17:27:07] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:27:50] INFO: Database connection established
+[2025-05-06 17:27:50] INFO: Server is listening on port 8080
+[2025-05-06 17:27:50] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:27:59] INFO: Database connection established
+[2025-05-06 17:27:59] INFO: Server is listening on port 8080
+[2025-05-06 17:27:59] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:28:03] INFO: Database connection established
+[2025-05-06 17:28:03] INFO: Server is listening on port 8080
+[2025-05-06 17:28:03] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:28:21] INFO: Database connection established
+[2025-05-06 17:28:21] INFO: Server is listening on port 8080
+[2025-05-06 17:28:21] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:28:48] INFO: Database connection established
+[2025-05-06 17:28:48] INFO: Server is listening on port 8080
+[2025-05-06 17:28:48] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:28:56] INFO: Database connection established
+[2025-05-06 17:28:56] INFO: Server is listening on port 8080
+[2025-05-06 17:28:56] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:29:07] INFO: Database connection established
+[2025-05-06 17:29:07] INFO: Server is listening on port 8080
+[2025-05-06 17:29:07] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:29:15] INFO: Database connection established
+[2025-05-06 17:29:15] INFO: Server is listening on port 8080
+[2025-05-06 17:29:15] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:32:46] INFO: Database connection established
+[2025-05-06 17:32:46] INFO: Server is listening on port 8080
+[2025-05-06 17:32:46] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:32:55] INFO: Database connection established
+[2025-05-06 17:32:55] INFO: Server is listening on port 8080
+[2025-05-06 17:32:55] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:33:43] INFO: Database connection established
+[2025-05-06 17:33:43] INFO: Server is listening on port 8080
+[2025-05-06 17:33:43] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:34:06] INFO: Database connection established
+[2025-05-06 17:34:06] INFO: Server is listening on port 8080
+[2025-05-06 17:34:06] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:34:38] INFO: Database connection established
+[2025-05-06 17:34:38] INFO: Server is listening on port 8080
+[2025-05-06 17:34:38] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:34:41] INFO: Database connection established
+[2025-05-06 17:34:41] INFO: Server is listening on port 8080
+[2025-05-06 17:34:41] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:34:50] INFO: Database connection established
+[2025-05-06 17:34:50] INFO: Server is listening on port 8080
+[2025-05-06 17:34:50] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:34:55] INFO: Database connection established
+[2025-05-06 17:34:55] INFO: Server is listening on port 8080
+[2025-05-06 17:34:55] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:34:58] INFO: Database connection established
+[2025-05-06 17:34:59] INFO: Server is listening on port 8080
+[2025-05-06 17:34:59] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:35:06] INFO: Database connection established
+[2025-05-06 17:35:06] INFO: Server is listening on port 8080
+[2025-05-06 17:35:06] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:35:12] INFO: Database connection established
+[2025-05-06 17:35:12] INFO: Server is listening on port 8080
+[2025-05-06 17:35:12] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:35:18] INFO: Database connection established
+[2025-05-06 17:35:18] INFO: Server is listening on port 8080
+[2025-05-06 17:35:18] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:37:12] INFO: [Mongoose] users.findOne {"email":"dev.tester008@gmail.com"} {}
+[2025-05-06 17:37:12] INFO: [Mongoose] users.updateOne {"_id":"6818c51664f9d8d0e99c1e9b","__v":1} {"$set":{"tokens":["eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MThjNTE2NjRmOWQ4ZDBlOTljMWU5YiIsImVtYWlsIjoiZGV2LnRlc3RlcjAwOEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc0NjU0OTQzMiwiZXhwIjoxNzQ2NjM1ODMyfQ.ihWshkqgFsrJpo382vi6mG_V8wcaKWqQi6yMx2VgCoc"],"lastLogin":"2025-05-06T16:37:12.881Z","updatedAt":"2025-05-06T16:37:12.893Z"},"$inc":{"__v":1}}
+[2025-05-06 17:37:42] ERROR: Error fetching profile in controller
+[2025-05-06 17:37:42] ERROR: [object Object]
+[2025-05-06 17:38:17] INFO: Database connection established
+[2025-05-06 17:38:17] INFO: Server is listening on port 8080
+[2025-05-06 17:38:17] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:38:18] ERROR: Error fetching profile in DAO
+[2025-05-06 17:38:18] ERROR: Error in profile service
+[2025-05-06 17:38:18] ERROR: Error fetching profile in controller
+[2025-05-06 17:38:18] ERROR: [object Object]
+[2025-05-06 17:40:21] ERROR: Error fetching profile in DAO
+[2025-05-06 17:40:21] ERROR: Error in profile service
+[2025-05-06 17:40:21] ERROR: Error fetching profile in controller
+[2025-05-06 17:40:21] ERROR: [object Object]
+[2025-05-06 17:45:14] INFO: Database connection established
+[2025-05-06 17:45:14] INFO: Server is listening on port 8080
+[2025-05-06 17:45:14] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:45:24] INFO: Database connection established
+[2025-05-06 17:45:24] INFO: Server is listening on port 8080
+[2025-05-06 17:45:24] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:46:06] INFO: Database connection established
+[2025-05-06 17:46:07] INFO: Server is listening on port 8080
+[2025-05-06 17:46:07] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:46:15] INFO: Database connection established
+[2025-05-06 17:46:15] INFO: Server is listening on port 8080
+[2025-05-06 17:46:15] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:47:19] INFO: Database connection established
+[2025-05-06 17:47:19] INFO: Server is listening on port 8080
+[2025-05-06 17:47:19] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:48:11] INFO: Database connection established
+[2025-05-06 17:48:11] INFO: Server is listening on port 8080
+[2025-05-06 17:48:11] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:49:04] INFO: Database connection established
+[2025-05-06 17:49:04] INFO: Server is listening on port 8080
+[2025-05-06 17:49:04] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:49:16] INFO: Database connection established
+[2025-05-06 17:49:16] INFO: Server is listening on port 8080
+[2025-05-06 17:49:16] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:49:48] INFO: Database connection established
+[2025-05-06 17:49:48] INFO: Server is listening on port 8080
+[2025-05-06 17:49:49] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:49:53] INFO: Database connection established
+[2025-05-06 17:49:53] INFO: Server is listening on port 8080
+[2025-05-06 17:49:53] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:50:03] INFO: Database connection established
+[2025-05-06 17:50:03] INFO: Server is listening on port 8080
+[2025-05-06 17:50:03] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:51:45] INFO: Database connection established
+[2025-05-06 17:51:45] INFO: Server is listening on port 8080
+[2025-05-06 17:51:46] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:51:50] INFO: Database connection established
+[2025-05-06 17:51:50] INFO: Server is listening on port 8080
+[2025-05-06 17:51:50] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:52:10] INFO: Database connection established
+[2025-05-06 17:52:10] INFO: Server is listening on port 8080
+[2025-05-06 17:52:10] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:52:16] INFO: Database connection established
+[2025-05-06 17:52:16] INFO: Server is listening on port 8080
+[2025-05-06 17:52:16] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:52:19] INFO: Database connection established
+[2025-05-06 17:52:19] INFO: Server is listening on port 8080
+[2025-05-06 17:52:19] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:52:37] INFO: Database connection established
+[2025-05-06 17:52:37] INFO: Server is listening on port 8080
+[2025-05-06 17:52:37] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:52:44] INFO: Database connection established
+[2025-05-06 17:52:44] INFO: Server is listening on port 8080
+[2025-05-06 17:52:44] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:53:10] INFO: Database connection established
+[2025-05-06 17:53:10] INFO: Server is listening on port 8080
+[2025-05-06 17:53:10] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:53:50] INFO: Database connection established
+[2025-05-06 17:53:50] INFO: Server is listening on port 8080
+[2025-05-06 17:53:50] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:54:01] INFO: Database connection established
+[2025-05-06 17:54:01] INFO: Server is listening on port 8080
+[2025-05-06 17:54:01] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:54:40] INFO: Database connection established
+[2025-05-06 17:54:40] INFO: Server is listening on port 8080
+[2025-05-06 17:54:40] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:55:32] INFO: Database connection established
+[2025-05-06 17:55:32] INFO: Server is listening on port 8080
+[2025-05-06 17:55:32] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:55:35] INFO: Database connection established
+[2025-05-06 17:55:35] INFO: Server is listening on port 8080
+[2025-05-06 17:55:35] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:55:40] INFO: Database connection established
+[2025-05-06 17:55:40] INFO: Server is listening on port 8080
+[2025-05-06 17:55:40] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:55:43] INFO: Database connection established
+[2025-05-06 17:55:43] INFO: Server is listening on port 8080
+[2025-05-06 17:55:43] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:56:12] INFO: Database connection established
+[2025-05-06 17:56:12] INFO: Server is listening on port 8080
+[2025-05-06 17:56:12] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:56:26] INFO: Database connection established
+[2025-05-06 17:56:27] INFO: Server is listening on port 8080
+[2025-05-06 17:56:27] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:57:12] INFO: Database connection established
+[2025-05-06 17:57:12] INFO: Server is listening on port 8080
+[2025-05-06 17:57:12] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:57:17] INFO: Database connection established
+[2025-05-06 17:57:17] INFO: Server is listening on port 8080
+[2025-05-06 17:57:17] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:57:35] INFO: Database connection established
+[2025-05-06 17:57:35] INFO: Server is listening on port 8080
+[2025-05-06 17:57:35] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:57:41] INFO: Database connection established
+[2025-05-06 17:57:41] INFO: Server is listening on port 8080
+[2025-05-06 17:57:41] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:57:51] INFO: Database connection established
+[2025-05-06 17:57:51] INFO: Server is listening on port 8080
+[2025-05-06 17:57:51] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:57:54] INFO: Database connection established
+[2025-05-06 17:57:54] INFO: Server is listening on port 8080
+[2025-05-06 17:57:54] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 17:57:59] ERROR: Error fetching profile in controller
+[2025-05-06 17:57:59] ERROR: [object Object]
+[2025-05-06 18:00:44] INFO: Database connection established
+[2025-05-06 18:00:44] INFO: Server is listening on port 8080
+[2025-05-06 18:00:44] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 18:00:51] INFO: Database connection established
+[2025-05-06 18:00:51] INFO: Server is listening on port 8080
+[2025-05-06 18:00:51] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 18:00:56] ERROR: Error fetching profile in controller
+[2025-05-06 18:00:56] ERROR: [object Object]
+[2025-05-06 18:03:26] INFO: Database connection established
+[2025-05-06 18:03:26] INFO: Server is listening on port 8080
+[2025-05-06 18:03:26] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 18:03:29] ERROR: Error fetching profile in controller
+[2025-05-06 18:03:29] ERROR: [object Object]
+[2025-05-06 18:05:42] INFO: Database connection established
+[2025-05-06 18:05:42] INFO: Server is listening on port 8080
+[2025-05-06 18:05:42] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 18:06:34] INFO: Database connection established
+[2025-05-06 18:06:34] INFO: Server is listening on port 8080
+[2025-05-06 18:06:34] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 18:07:09] INFO: Database connection established
+[2025-05-06 18:07:09] INFO: Server is listening on port 8080
+[2025-05-06 18:07:09] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 18:07:16] INFO: Database connection established
+[2025-05-06 18:07:16] INFO: Server is listening on port 8080
+[2025-05-06 18:07:16] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 18:07:23] INFO: Database connection established
+[2025-05-06 18:07:23] INFO: Server is listening on port 8080
+[2025-05-06 18:07:23] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 18:07:26] INFO: Database connection established
+[2025-05-06 18:07:26] INFO: Server is listening on port 8080
+[2025-05-06 18:07:26] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 18:07:37] INFO: Database connection established
+[2025-05-06 18:07:37] INFO: Server is listening on port 8080
+[2025-05-06 18:07:37] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 18:07:55] INFO: Database connection established
+[2025-05-06 18:07:55] INFO: Server is listening on port 8080
+[2025-05-06 18:07:55] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 18:07:59] INFO: Database connection established
+[2025-05-06 18:07:59] INFO: Server is listening on port 8080
+[2025-05-06 18:07:59] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 18:08:18] INFO: Database connection established
+[2025-05-06 18:08:18] INFO: Server is listening on port 8080
+[2025-05-06 18:08:18] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 18:08:23] INFO: Database connection established
+[2025-05-06 18:08:23] INFO: Server is listening on port 8080
+[2025-05-06 18:08:23] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 18:08:27] ERROR: Error fetching profile in controller
+[2025-05-06 18:08:27] ERROR: [object Object]
+[2025-05-06 18:09:06] INFO: Database connection established
+[2025-05-06 18:09:06] INFO: Server is listening on port 8080
+[2025-05-06 18:09:06] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 18:09:20] INFO: Database connection established
+[2025-05-06 18:09:20] INFO: Server is listening on port 8080
+[2025-05-06 18:09:20] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 18:09:25] INFO: Database connection established
+[2025-05-06 18:09:25] INFO: Server is listening on port 8080
+[2025-05-06 18:09:25] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 18:09:31] INFO: Database connection established
+[2025-05-06 18:09:31] INFO: Server is listening on port 8080
+[2025-05-06 18:09:31] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 18:09:36] INFO: Database connection established
+[2025-05-06 18:09:36] INFO: Server is listening on port 8080
+[2025-05-06 18:09:36] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 18:09:36] ERROR: Error fetching profile in controller
+[2025-05-06 18:09:36] ERROR: [object Object]
+[2025-05-06 18:10:16] INFO: Database connection established
+[2025-05-06 18:10:16] INFO: Server is listening on port 8080
+[2025-05-06 18:10:16] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 18:10:18] INFO: id from token
+[2025-05-06 18:10:18] ERROR: Error fetching profile in controller
+[2025-05-06 18:10:18] ERROR: [object Object]
+[2025-05-06 18:12:38] INFO: Database connection established
+[2025-05-06 18:12:38] INFO: Server is listening on port 8080
+[2025-05-06 18:12:38] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 18:12:52] INFO: Database connection established
+[2025-05-06 18:12:52] INFO: Server is listening on port 8080
+[2025-05-06 18:12:52] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 18:13:00] INFO: Validating userId from token
+[2025-05-06 18:13:00] WARN: Invalid userId format
+[2025-05-06 18:13:00] ERROR: Error fetching profile in controller
+[2025-05-06 18:13:00] ERROR: [object Object]
+[2025-05-06 18:14:21] INFO: Database connection established
+[2025-05-06 18:14:22] INFO: Server is listening on port 8080
+[2025-05-06 18:14:22] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 18:16:12] INFO: Database connection established
+[2025-05-06 18:16:12] INFO: Server is listening on port 8080
+[2025-05-06 18:16:12] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 18:16:15] INFO: Validating userId from token
+[2025-05-06 18:16:15] INFO: Validating userId from token
+[2025-05-06 18:16:15] INFO: [Mongoose] users.findOne {"_id":"6818c51664f9d8d0e99c1e9b"} {"projection":{"profile":1,"skills":1,"firstName":1,"lastName":1}}
+[2025-05-06 18:16:15] INFO: No profile found for user, returning empty array
+[2025-05-06 18:16:15] INFO: Empty profile returned for user
+[2025-05-06 18:20:23] INFO: Database connection established
+[2025-05-06 18:20:23] INFO: Server is listening on port 8080
+[2025-05-06 18:20:23] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 18:20:28] INFO: Database connection established
+[2025-05-06 18:20:28] INFO: Server is listening on port 8080
+[2025-05-06 18:20:28] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 18:21:26] INFO: Database connection established
+[2025-05-06 18:21:26] INFO: Server is listening on port 8080
+[2025-05-06 18:21:26] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 18:48:06] INFO: MongoDB disconnected. Attempting to reconnect...
+[2025-05-06 18:48:11] INFO: Successfully connected to MongoDB
+[2025-05-06 18:51:37] INFO: Database connection established
+[2025-05-06 18:51:37] INFO: Server is listening on port 8080
+[2025-05-06 18:51:37] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 18:53:47] INFO: Validating userId from token
+[2025-05-06 18:53:47] INFO: Fetching profile for user
+[2025-05-06 18:53:47] INFO: [Mongoose] users.findOne {"_id":"6818c51664f9d8d0e99c1e9b"} {"projection":{"profile":1,"skills":1,"firstName":1,"lastName":1}}
+[2025-05-06 18:53:47] INFO: No profile found for user, returning empty array
+[2025-05-06 18:53:47] INFO: Empty profile returned for user
+[2025-05-06 18:54:33] INFO: No avatar uploaded for profile; proceeding with empty avatar array
+[2025-05-06 18:54:33] INFO: Creating new profile
+[2025-05-06 18:54:33] INFO: [Mongoose] users.findOne {"_id":"6818c51664f9d8d0e99c1e9b"} {}
+[2025-05-06 18:54:33] INFO: [Mongoose] users.findOneAndUpdate {"_id":"6818c51664f9d8d0e99c1e9b"} {"$setOnInsert":{"createdAt":"2025-05-06T17:54:33.378Z"},"$set":{"updatedAt":"2025-05-06T17:54:33.378Z"},"$push":{"profile":{"avatar":[],"location":"Abuja, Federal Capital Territory","primaryRole":{"value":"151647","label":"Backend Engineer"},"yearsExperience":{"value":"3","label":"3 Years"},"roles":[{"value":"14726","label":"Software Engineer","_id":"681a4cd994f859c29523008d"},{"value":"151711","label":"Frontend Engineer","_id":"681a4cd994f859c29523008e"},{"value":"152011","label":"QA Engineer","_id":"681a4cd994f859c29523008f"}],"bio":"I’m a full-stack developer with over 3 years of experience building and improving web applications using Next.js, React, Node.js, Python, Kubernetes, and Docker.","website":"https://opara-gregory-chukwuma-portfolio.vercel.app/","linkedin":"https://www.linkedin.com/in/gregory-opara-622591247","github":"https://github.com/Itzgregory","twitter":"https://twitter.com/Itzgregory","workExperience":[{"company":"Joreal Nigeria","role":"Software Developer","startDate":"2022-01-01","endDate":"2024-12-31","_id":"681a4cd994f859c295230090"}],"education":[{"school":"Veritas University Abuja","degree":"Bachelor's in Computer Science","year":"2021","_id":"681a4cd994f859c295230091"}],"achievements":"Launched a successful Android app with 10,000+ downloads and implemented scalable backend systems at Joreal Nigeria.","pronouns":{"value":"HE_HIM","label":"He / Him"},"gender":{"value":"MALE","label":"Man"},"raceEthnicity":["BLACK_OR_AFRICAN_AMERICAN"],"_id":"681a4cd994f859c29523008c","createdAt":"2025-05-06T17:54:33.378Z","updatedAt":"2025-05-06T17:54:33.378Z"},"skills":{"$each":[{"name":"Python","proficiencyLevel":"Advanced","_id":"681a4cd994f859c29523008a","createdAt":"2025-05-06T17:54:33.378Z","updatedAt":"2025-05-06T17:54:33.378Z"},{"name":"MERN Stack","proficiencyLevel":"Intermediate","_id":"681a4cd994f859c29523008b","createdAt":"2025-05-06T17:54:33.378Z","updatedAt":"2025-05-06T17:54:33.378Z"}]}}}
+[2025-05-06 18:54:33] INFO: Profile created successfully
+[2025-05-06 18:54:47] INFO: Validating userId from token
+[2025-05-06 18:54:47] INFO: Fetching profile for user
+[2025-05-06 18:54:47] INFO: [Mongoose] users.findOne {"_id":"6818c51664f9d8d0e99c1e9b"} {"projection":{"profile":1,"skills":1,"firstName":1,"lastName":1}}
+[2025-05-06 18:54:47] INFO: Profile retrieved successfully
+[2025-05-06 19:01:11] INFO: Database connection established
+[2025-05-06 19:01:11] INFO: Server is listening on port 8080
+[2025-05-06 19:01:11] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 19:02:11] INFO: Database connection established
+[2025-05-06 19:02:11] INFO: Server is listening on port 8080
+[2025-05-06 19:02:11] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 19:02:40] INFO: Validating userId from token
+[2025-05-06 19:02:40] INFO: Fetching profile for user
+[2025-05-06 19:02:40] INFO: [Mongoose] users.findOne {"_id":"6818c51664f9d8d0e99c1e9b"} {"projection":{"profile":1,"skills":1,"firstName":1,"lastName":1}}
+[2025-05-06 19:02:40] INFO: No profile found for user, returning empty array
+[2025-05-06 19:02:40] INFO: Empty profile returned for user
+[2025-05-06 19:04:54] INFO: No avatar uploaded for profile; proceeding with empty avatar array
+[2025-05-06 19:04:54] INFO: Creating new profile
+[2025-05-06 19:04:54] INFO: [Mongoose] users.findOne {"_id":"6818c51664f9d8d0e99c1e9b"} {}
+[2025-05-06 19:04:54] INFO: [Mongoose] users.findOneAndUpdate {"_id":"6818c51664f9d8d0e99c1e9b"} {"$setOnInsert":{"createdAt":"2025-05-06T18:04:54.142Z"},"$set":{"updatedAt":"2025-05-06T18:04:54.142Z"},"$push":{"profile":{"avatar":[],"location":"Abuja, Federal Capital Territory","primaryRole":"Backend Engineer","yearsExperience":"3 Years","roles":["Software Engineer","Frontend Engineer","QA Engineer"],"bio":"I’m a full-stack developer with over 3 years of experience building and improving web applications using Next.js, React, Node.js, Python, Kubernetes, and Docker.","website":"https://opara-gregory-chukwuma-portfolio.vercel.app/","linkedin":"https://www.linkedin.com/in/gregory-opara-622591247","github":"https://github.com/Itzgregory","twitter":"https://twitter.com/Itzgregory","workExperience":[{"company":"Joreal Nigeria","role":"Software Developer","startDate":"2022-01-01","endDate":"2024-12-31","_id":"681a4f466fa77b1b24ed4111"}],"education":[{"school":"Veritas University Abuja","degree":"Bachelor's in Computer Science","year":"2021","_id":"681a4f466fa77b1b24ed4112"}],"achievements":"Launched a successful Android app with 10,000+ downloads and implemented scalable backend systems at Joreal Nigeria.","pronouns":"He / Him","gender":"Man","raceEthnicity":["BLACK_OR_AFRICAN_AMERICAN"],"_id":"681a4f466fa77b1b24ed4110","createdAt":"2025-05-06T18:04:54.142Z","updatedAt":"2025-05-06T18:04:54.142Z"}}}
+[2025-05-06 19:04:54] INFO: Profile created successfully
+[2025-05-06 19:05:09] INFO: Validating userId from token
+[2025-05-06 19:05:09] INFO: Fetching profile for user
+[2025-05-06 19:05:09] INFO: [Mongoose] users.findOne {"_id":"6818c51664f9d8d0e99c1e9b"} {"projection":{"profile":1,"skills":1,"firstName":1,"lastName":1}}
+[2025-05-06 19:05:09] INFO: Profile retrieved successfully
+[2025-05-06 19:07:14] INFO: Database connection established
+[2025-05-06 19:07:14] INFO: Server is listening on port 8080
+[2025-05-06 19:07:14] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 19:07:18] INFO: Database connection established
+[2025-05-06 19:07:18] INFO: Server is listening on port 8080
+[2025-05-06 19:07:18] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 19:07:23] INFO: Validating userId from token
+[2025-05-06 19:07:23] INFO: Fetching profile for user
+[2025-05-06 19:07:23] INFO: [Mongoose] users.findOne {"_id":"6818c51664f9d8d0e99c1e9b"} {"projection":{"profile":1,"skills":1,"firstName":1,"lastName":1}}
+[2025-05-06 19:07:23] INFO: Profile retrieved successfully
+[2025-05-06 19:08:47] INFO: No avatar uploaded for profile; proceeding with empty avatar array
+[2025-05-06 19:08:47] ERROR: Error creating profile
+[2025-05-06 19:08:47] ERROR: [object Object]
+[2025-05-06 19:08:55] INFO: No avatar uploaded for profile; proceeding with empty avatar array
+[2025-05-06 19:08:55] ERROR: Error creating profile
+[2025-05-06 19:08:55] ERROR: [object Object]
+[2025-05-06 19:09:21] INFO: Database connection established
+[2025-05-06 19:09:21] INFO: Server is listening on port 8080
+[2025-05-06 19:09:21] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 19:09:31] INFO: Database connection established
+[2025-05-06 19:09:31] INFO: Server is listening on port 8080
+[2025-05-06 19:09:31] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 19:09:35] INFO: Database connection established
+[2025-05-06 19:09:35] INFO: Server is listening on port 8080
+[2025-05-06 19:09:35] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 19:09:41] INFO: Database connection established
+[2025-05-06 19:09:41] INFO: Server is listening on port 8080
+[2025-05-06 19:09:41] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 19:10:02] INFO: Database connection established
+[2025-05-06 19:10:02] INFO: Server is listening on port 8080
+[2025-05-06 19:10:02] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 19:10:13] INFO: Database connection established
+[2025-05-06 19:10:13] INFO: Server is listening on port 8080
+[2025-05-06 19:10:13] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 19:10:24] INFO: Database connection established
+[2025-05-06 19:10:24] INFO: Server is listening on port 8080
+[2025-05-06 19:10:24] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 19:10:33] INFO: Database connection established
+[2025-05-06 19:10:33] INFO: Server is listening on port 8080
+[2025-05-06 19:10:33] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 19:10:34] INFO: No avatar uploaded for profile; proceeding with empty avatar array
+[2025-05-06 19:10:34] INFO: Creating new profile
+[2025-05-06 19:10:34] INFO: [Mongoose] users.findOne {"_id":"6818c51664f9d8d0e99c1e9b"} {}
+[2025-05-06 19:10:34] INFO: [Mongoose] users.findOneAndUpdate {"_id":"6818c51664f9d8d0e99c1e9b"} {"$setOnInsert":{"createdAt":"2025-05-06T18:10:34.962Z"},"$set":{"updatedAt":"2025-05-06T18:10:34.962Z"},"$push":{"profile":{"avatar":[],"location":"Abuja, Federal Capital Territory","primaryRole":"Backend Engineer","yearsExperience":"3 Years","roles":["Software Engineer","Frontend Engineer","QA Engineer"],"bio":"I’m a full-stack developer with over 3 years of experience building and improving web applications using Next.js, React, Node.js, Python, Kubernetes, and Docker.","website":"https://opara-gregory-chukwuma-portfolio.vercel.app/","linkedin":"https://www.linkedin.com/in/gregory-opara-622591247","github":"https://github.com/Itzgregory","twitter":"https://twitter.com/Itzgregory","workExperience":[{"company":"Joreal Nigeria","role":"Software Developer","startDate":"2022-01-01","endDate":"2024-12-31","_id":"681a509aedc3f08895e56a9d"}],"education":[{"school":"Veritas University Abuja","degree":"Bachelor's in Computer Science","year":"2021","_id":"681a509aedc3f08895e56a9e"}],"achievements":"Launched a successful Android app with 10,000+ downloads and implemented scalable backend systems at Joreal Nigeria.","pronouns":"He / Him","gender":"Man","raceEthnicity":["BLACK_OR_AFRICAN_AMERICAN"],"_id":"681a509aedc3f08895e56a9c","createdAt":"2025-05-06T18:10:34.962Z","updatedAt":"2025-05-06T18:10:34.962Z"},"skills":{"$each":[{"name":"Python","proficiencyLevel":"Advanced","_id":"681a509aedc3f08895e56a9a","createdAt":"2025-05-06T18:10:34.962Z","updatedAt":"2025-05-06T18:10:34.962Z"},{"name":"MERN Stack","proficiencyLevel":"Intermediate","_id":"681a509aedc3f08895e56a9b","createdAt":"2025-05-06T18:10:34.962Z","updatedAt":"2025-05-06T18:10:34.962Z"}]}}}
+[2025-05-06 19:10:35] INFO: Profile created successfully
+[2025-05-06 19:10:45] INFO: No avatar uploaded for profile; proceeding with empty avatar array
+[2025-05-06 19:10:45] ERROR: Error creating profile
+[2025-05-06 19:10:45] ERROR: [object Object]
+[2025-05-06 19:10:56] INFO: No avatar uploaded for profile; proceeding with empty avatar array
+[2025-05-06 19:10:56] INFO: Creating new profile
+[2025-05-06 19:10:56] INFO: [Mongoose] users.findOne {"_id":"6818c51664f9d8d0e99c1e9b"} {}
+[2025-05-06 19:10:56] ERROR: Error in profile service
+[2025-05-06 19:10:56] ERROR: Error creating profile
+[2025-05-06 19:10:56] ERROR: [object Object]
+[2025-05-06 19:11:41] INFO: Database connection established
+[2025-05-06 19:11:41] INFO: Server is listening on port 8080
+[2025-05-06 19:11:41] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 19:11:55] INFO: Database connection established
+[2025-05-06 19:11:55] INFO: Server is listening on port 8080
+[2025-05-06 19:11:55] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 19:11:59] INFO: No avatar uploaded for profile; proceeding with empty avatar array
+[2025-05-06 19:12:00] ERROR: Profile validation error: "avatarr" is not allowed
+[2025-05-06 19:12:17] INFO: No avatar uploaded for profile; proceeding with empty avatar array
+[2025-05-06 19:12:17] INFO: Creating new profile
+[2025-05-06 19:12:17] INFO: [Mongoose] users.findOne {"_id":"6818c51664f9d8d0e99c1e9b"} {}
+[2025-05-06 19:12:17] ERROR: Error in profile service
+[2025-05-06 19:12:17] ERROR: Error creating profile
+[2025-05-06 19:12:17] ERROR: [object Object]
+[2025-05-06 19:12:35] INFO: Validating userId from token
+[2025-05-06 19:12:35] INFO: Fetching profile for user
+[2025-05-06 19:12:35] INFO: [Mongoose] users.findOne {"_id":"6818c51664f9d8d0e99c1e9b"} {"projection":{"profile":1,"skills":1,"firstName":1,"lastName":1}}
+[2025-05-06 19:12:35] INFO: Profile retrieved successfully
+[2025-05-06 22:17:09] INFO: MongoDB disconnected. Attempting to reconnect...
+[2025-05-06 22:17:14] INFO: Successfully connected to MongoDB
+[2025-05-06 22:18:02] INFO: Database connection established
+[2025-05-06 22:18:02] INFO: Server is listening on port 8080
+[2025-05-06 22:18:02] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 22:18:17] INFO: Database connection established
+[2025-05-06 22:18:17] INFO: Server is listening on port 8080
+[2025-05-06 22:18:17] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 22:18:20] INFO: Database connection established
+[2025-05-06 22:18:20] INFO: Server is listening on port 8080
+[2025-05-06 22:18:20] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 22:18:52] INFO: Database connection established
+[2025-05-06 22:18:55] INFO: Database connection established
+[2025-05-06 22:18:55] INFO: Server is listening on port 8080
+[2025-05-06 22:18:55] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 22:19:02] INFO: Database connection established
+[2025-05-06 22:19:02] INFO: Server is listening on port 8080
+[2025-05-06 22:19:02] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 22:19:05] INFO: Database connection established
+[2025-05-06 22:19:05] INFO: Server is listening on port 8080
+[2025-05-06 22:19:05] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 22:19:15] INFO: Database connection established
+[2025-05-06 22:19:15] INFO: Server is listening on port 8080
+[2025-05-06 22:19:15] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 22:30:59] INFO: Database connection established
+[2025-05-06 22:30:59] INFO: Server is listening on port 8080
+[2025-05-06 22:30:59] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 22:34:21] INFO: Database connection established
+[2025-05-06 22:34:21] INFO: Server is listening on port 8080
+[2025-05-06 22:34:21] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 22:35:51] INFO: Validating userId from token
+[2025-05-06 22:35:51] INFO: Fetching profile for user
+[2025-05-06 22:35:51] INFO: [Mongoose] users.findOne {"_id":"6818c51664f9d8d0e99c1e9b"} {"projection":{"profile":1,"skills":1,"firstName":1,"lastName":1}}
+[2025-05-06 22:35:51] INFO: Profile retrieved successfully
+[2025-05-06 22:36:24] INFO: Database connection established
+[2025-05-06 22:36:24] INFO: Server is listening on port 8080
+[2025-05-06 22:36:24] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 22:36:27] INFO: Validating userId from token
+[2025-05-06 22:36:27] INFO: Fetching preference for user
+[2025-05-06 22:36:27] INFO: [Mongoose] users.findOne {"_id":"6818c51664f9d8d0e99c1e9b"} {"projection":{"preferences":1}}
+[2025-05-06 22:36:27] INFO: preference retrieved successfully
+[2025-05-06 22:38:44] INFO: Database connection established
+[2025-05-06 22:38:44] INFO: Server is listening on port 8080
+[2025-05-06 22:38:45] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 22:38:55] INFO: Database connection established
+[2025-05-06 22:38:55] INFO: Server is listening on port 8080
+[2025-05-06 22:38:55] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 22:39:02] INFO: Database connection established
+[2025-05-06 22:39:02] INFO: Server is listening on port 8080
+[2025-05-06 22:39:02] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 22:39:18] INFO: Database connection established
+[2025-05-06 22:39:18] INFO: Server is listening on port 8080
+[2025-05-06 22:39:18] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 22:40:17] INFO: Database connection established
+[2025-05-06 22:40:17] INFO: Server is listening on port 8080
+[2025-05-06 22:40:17] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 22:40:51] INFO: Database connection established
+[2025-05-06 22:40:51] INFO: Server is listening on port 8080
+[2025-05-06 22:40:52] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 22:41:22] INFO: Database connection established
+[2025-05-06 22:41:22] INFO: Server is listening on port 8080
+[2025-05-06 22:41:22] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 22:41:39] INFO: Database connection established
+[2025-05-06 22:41:39] INFO: Server is listening on port 8080
+[2025-05-06 22:41:39] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 22:41:51] INFO: Database connection established
+[2025-05-06 22:41:51] INFO: Server is listening on port 8080
+[2025-05-06 22:41:51] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 22:41:56] INFO: Database connection established
+[2025-05-06 22:41:56] INFO: Server is listening on port 8080
+[2025-05-06 22:41:56] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 22:42:04] INFO: Database connection established
+[2025-05-06 22:42:04] INFO: Server is listening on port 8080
+[2025-05-06 22:42:04] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 22:42:21] INFO: Database connection established
+[2025-05-06 22:42:21] INFO: Server is listening on port 8080
+[2025-05-06 22:42:21] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 22:42:57] INFO: Database connection established
+[2025-05-06 22:42:57] INFO: Server is listening on port 8080
+[2025-05-06 22:42:57] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 22:43:15] INFO: Database connection established
+[2025-05-06 22:43:15] INFO: Server is listening on port 8080
+[2025-05-06 22:43:15] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 22:43:40] INFO: Database connection established
+[2025-05-06 22:43:40] INFO: Server is listening on port 8080
+[2025-05-06 22:43:40] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 22:43:48] INFO: Database connection established
+[2025-05-06 22:43:48] INFO: Server is listening on port 8080
+[2025-05-06 22:43:48] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 22:44:00] INFO: Database connection established
+[2025-05-06 22:44:00] INFO: Server is listening on port 8080
+[2025-05-06 22:44:00] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 22:44:19] INFO: Database connection established
+[2025-05-06 22:44:19] INFO: Server is listening on port 8080
+[2025-05-06 22:44:19] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 22:44:34] INFO: Database connection established
+[2025-05-06 22:44:34] INFO: Server is listening on port 8080
+[2025-05-06 22:44:34] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 22:44:54] INFO: Database connection established
+[2025-05-06 22:44:54] INFO: Server is listening on port 8080
+[2025-05-06 22:44:54] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 22:45:09] INFO: Database connection established
+[2025-05-06 22:45:09] INFO: Server is listening on port 8080
+[2025-05-06 22:45:09] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 22:46:43] INFO: Database connection established
+[2025-05-06 22:46:43] INFO: Server is listening on port 8080
+[2025-05-06 22:46:43] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 22:47:28] INFO: Database connection established
+[2025-05-06 22:47:28] INFO: Server is listening on port 8080
+[2025-05-06 22:47:28] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 22:48:19] INFO: Database connection established
+[2025-05-06 22:48:19] INFO: Server is listening on port 8080
+[2025-05-06 22:48:19] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 22:53:55] INFO: Database connection established
+[2025-05-06 22:53:55] INFO: Server is listening on port 8080
+[2025-05-06 22:53:55] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 22:53:59] INFO: Database connection established
+[2025-05-06 22:53:59] INFO: Server is listening on port 8080
+[2025-05-06 22:53:59] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 22:54:39] ERROR: Error fetching culture in controller
+[2025-05-06 22:54:39] ERROR: [object Object]
+[2025-05-06 22:55:10] INFO: Database connection established
+[2025-05-06 22:55:10] INFO: Server is listening on port 8080
+[2025-05-06 22:55:10] INFO: [Mongoose] users.createIndex {"email":1} {"unique":true,"background":true}
+[2025-05-06 22:55:12] INFO: Validating userId from token
+[2025-05-06 22:55:12] INFO: Fetching culture for user
+[2025-05-06 22:55:12] INFO: [Mongoose] users.findOne {"_id":"6818c51664f9d8d0e99c1e9b"} {"projection":{"culture":1}}
+[2025-05-06 22:55:12] INFO: culture retrieved successfully
+[2025-05-06 23:16:52] INFO: [Mongoose] users.findOne {"email":"dev.tester008@gmail.com"} {}
+[2025-05-06 23:16:52] INFO: [Mongoose] users.updateOne {"_id":"6818c51664f9d8d0e99c1e9b","__v":2} {"$set":{"tokens":["eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MThjNTE2NjRmOWQ4ZDBlOTljMWU5YiIsImVtYWlsIjoiZGV2LnRlc3RlcjAwOEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc0NjU2OTgxMiwiZXhwIjoxNzQ2NjU2MjEyfQ.uCkoqbBW4kgnRWHD0VkE6nVLl6jMesgeGkkgp6dpTXU"],"lastLogin":"2025-05-06T22:16:52.612Z","updatedAt":"2025-05-06T22:16:52.624Z"},"$inc":{"__v":1}}

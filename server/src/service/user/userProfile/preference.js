@@ -1,4 +1,4 @@
-const { createPreferenceDao } = require('../../../dal/dao/user/userProfile/preference');
+const { createPreferenceDao, getpreferenceDao } = require('../../../dal/dao/user/userProfile/preference');
 const { getUserModel } = require('../../../models/user/userModel');
 const { logger } = require('../../../helpers/logger');
 const AppError = require('../../../middlewares/errorhandler/appError');
@@ -27,4 +27,33 @@ const createPreferenceService = async (userId, preferenceData) => {
   }
 };
 
-module.exports = { createPreferenceService };
+const getPreferenceService = async (id) => {
+  try {
+    const preference = await getpreferenceDao(id);
+
+    if (Array.isArray(preference) && preference.length === 0) {
+      logger.info('Empty preference returned for user', { id });
+      return {
+        success: false,
+        data: [],
+        message: 'No preference found'
+      };
+    }
+
+    logger.info('preference retrieved successfully', { id });
+    return {
+      success: true,
+      data: preference,
+      message: 'preference retrieved successfully'
+    };
+  } catch (error) {
+    logger.error('Error in preference service', {
+      error: error.message,
+      stack: error.stack,
+      userId
+    });
+    throw error;
+  }
+};
+
+module.exports = { createPreferenceService, getPreferenceService };
