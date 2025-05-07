@@ -53,7 +53,7 @@
 
 import { usePathname } from 'next/navigation';
 import { menuItems } from '../utills/menuItem';
-import {MenuItem} from '../types/menuTypes';
+import { MenuItem } from '../types/menuTypes';
 
 export function useActiveMenu(): string {
   const pathname = usePathname();
@@ -62,5 +62,5 @@ export function useActiveMenu(): string {
     pathname === item.href || pathname.startsWith(item.href)
   );
   
-  return matchingItem?.id || 'menu-item-1'; 
+  return matchingItem?.id || ''; 
 }

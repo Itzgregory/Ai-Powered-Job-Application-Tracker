@@ -1,11 +1,9 @@
-import ComingSoon from "@/features/comingSoon/comingSoon";
+import { ProfileWrapper } from '@/features/dashboardView/components/profile/components/profile/components/Profile';
 
-
-export default function Clients() {
+export default function ProfileUser() {
     return (
         <div className="parent-page">
-            <h1>Welcome to the clients page </h1>
-            <ComingSoon />
+            <ProfileWrapper />
         </div>
     );
 }
