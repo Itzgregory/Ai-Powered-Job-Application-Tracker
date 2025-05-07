@@ -1,5 +1,5 @@
 import { ReactNode, useState } from "react";
-import { FaArrowUp } from 'react-icons/fa';
+import { FaArrowDown } from 'react-icons/fa';
 
 export interface DropdownOption {
   label: string;
@@ -44,7 +44,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
         onClick={() => setIsOpen(!isOpen)}
       >
         <span>{selected ? (Array.isArray(selected) ? selected.join(", ") : selected) : placeholder}</span>
-        <FaArrowUp className={`text-gray-500 transition-transform ${isOpen ? "rotate-180" : ""}`}/>
+        <FaArrowDown className={`text-gray-500 transition-transform ${isOpen ? "rotate-180" : ""}`}/>
       </button>
 
       {isOpen && (

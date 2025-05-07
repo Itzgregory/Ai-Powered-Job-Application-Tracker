@@ -1,5 +1,5 @@
 "use client";
-import { ProfileAboutLabelLeft } from "./leftLable";
+import { ProfileAboutLabelLeft } from "./aboutLeft";
 import { ProfileAboutLabelRight } from "./aboutRight";
 
 export const Aboutmain = () => {

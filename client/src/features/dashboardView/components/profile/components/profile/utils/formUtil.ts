@@ -1,12 +1,13 @@
-import { Profile } from '../types/profileType';
+import { ProfileFormData } from '../types/profileType';
 
 // This file is responsibile for handling the process of returning an empty profile object with default values for form initialization.
 // It will be used when the backend returns null or an empty array to populate the form with empty fields.
 
-export const initializeEmptyProfile = (): Profile => {
+export const initializeEmptyProfile = (): ProfileFormData => {
   return {
     id: '',
-    name: '',
+    firstName: '',
+    lastName: '',
     avatar: '',
     location: '',
     primaryRole: { value: '', label: '' },
