@@ -1,11 +1,11 @@
-export const ProfileAboutLabelLeft = () => (
+export const ProfileSocailsLabelLeft = () => (
   <>
     <header className="text-left mb-2 xs:mb-4 sm:mb-8">
       <h4 className="font-playfair text-xl xs:text-2xl sm:text-3xl md:text-2xl font-semibold text-[--primary-color] mb-1 xs:mb-2">
-        About
+        Socail Profiles
       </h4>
       <p className="text-xs xs:text-sm sm:text-base text-[--text-color-grey]">
-        Tell us about yourself so startups know who you are.
+       Where can people find you online?
       </p>
     </header>
   </>
