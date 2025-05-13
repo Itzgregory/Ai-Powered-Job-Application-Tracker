@@ -1,23 +1,6 @@
-import { ReactNode, useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 import { FaArrowDown, FaTimes } from 'react-icons/fa';
-
-interface DropdownOption {
-  label: string;
-  value: string;
-  icon?: ReactNode;
-}
-
-interface DropdownProps {
-  options: DropdownOption[];
-  placeholder?: string;
-  isMulti?: boolean;
-  className?: string;
-  selectedValues?: string[];
-  displaySelections?: boolean;
-  showLabels?: boolean;
-  clearable?: boolean;
-  onSelect?: (value: string | string[]) => void;
-}
+import  { DropdownOption, DropdownProps } from '../../types/dropDownTypes';
 
 export const Dropdown: React.FC<DropdownProps> = ({
   options,
@@ -66,7 +49,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
   return (
     <div className={`relative w-full ${className}`} ref={dropdownRef}>
       <button
-        className="flex w-full items-center justify-between rounded-lg border bg-white p-2 xs:p-3 sm:p-4 hover:bg-gray-100"
+        className="flex w-full items-center justify-between rounded-lg border bg-white p-2 xs:p-3 sm:p-4"
         onClick={() => setIsOpen(!isOpen)}
       >
         <span className="truncate text-xs xs:text-sm sm:text-base">{getDisplayText()}</span>
@@ -90,7 +73,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
           {options.map(({ value, label, icon }) => (
             <li
               key={value}
-              className={`flex items-center p-2 xs:p-3 sm:p-4 hover:bg-gray-100 cursor-pointer min-h-[44px] ${
+              className={`flex items-center p-2 xs:p-3 sm:p-4 hover:bg-[--active-menu-hover] hover:text-[--active-menu-hover-text] cursor-pointer min-h-[44px] ${
                 selectedValues.includes(value) ? 'bg-blue-50' : ''
               }`}
               onClick={() => handleSelect(value)}

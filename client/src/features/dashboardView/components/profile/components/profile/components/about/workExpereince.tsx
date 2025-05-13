@@ -7,7 +7,7 @@ export const ProfileAboutLabelRightExperience = () => {
 
   return (
     <div className="w-full min-h-[68px] xs:min-h-[72px] sm:min-h-[76px] md:min-h-[80px] box-border">
-      <label className="block mb-0.5 xs:mb-1 sm:mb-1.5 md:mb-2 text-[11px] xs:text-xs sm:text-sm md:text-base text-gray-700">
+      <label className="block mb-0.5 xs:mb-1 sm:mb-1.5 md:mb-2 text-[9px] xs:text-[10px] sm:text-xs md:text-sm text-gray-700">
         Years of experience*
       </label>
       <Dropdown

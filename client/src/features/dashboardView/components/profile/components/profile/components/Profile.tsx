@@ -2,6 +2,7 @@
 import {Aboutmain} from "./about/aboutMain"
 import {Socialsmain} from "./socials/socialsMain"
 import {Educationmain} from "./education/educationMain"
+import {Workmain} from "./workExperience/workExperienceMain"
 
 export function ProfileWrapper() {
   return (
@@ -10,6 +11,7 @@ export function ProfileWrapper() {
         <div className=" w-full">
           <Aboutmain/>
           <Socialsmain/>
+          <Workmain/>
           <Educationmain/>
         </div>
       </div>

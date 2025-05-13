@@ -3,6 +3,7 @@ import { ReactNode } from "react";
 import { InputField } from "../components/about/inputField";
 
 export interface DescriptionFieldProps {
+    name?: string;
     children: ReactNode;
     className?: string;
     maxLength?: number;

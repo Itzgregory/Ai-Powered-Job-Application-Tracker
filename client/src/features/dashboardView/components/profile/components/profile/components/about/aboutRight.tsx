@@ -47,7 +47,7 @@ export const ProfileAboutLabelRight = () => (
     </div>
 
     <div className="mt-1 xs:mt-2 sm:mt-3 md:mt-4 py-1 xs:py-1.5 sm:py-2 md:py-3">
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-1 xs:gap-2 sm:gap-3 md:gap-4 w-full flex md:flex-row md:items-stretch box-border">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-1 xs:gap-2 sm:gap-3 md:gap-4 w-full md:flex-row md:items-stretch box-border">
         <div className="col-span-1 md:col-span-8">
           <ProfileAboutLabelRightRolesPrimary />
         </div>

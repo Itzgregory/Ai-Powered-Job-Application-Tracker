@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 
 export interface InputFieldProps {
+  name?: string;
   label?: string;
   placeholder?: string;
   icon?: ReactNode;
@@ -17,6 +18,7 @@ export interface InputFieldProps {
 }
 
 export const InputField: React.FC<InputFieldProps> = ({
+  name,
   label,
   placeholder = "Enter text",
   icon,
@@ -41,7 +43,7 @@ export const InputField: React.FC<InputFieldProps> = ({
 
   const inputClasses = `w-full p-1 xs:p-2 sm:p-3 text-xs xs:text-sm sm:text-base ${
     icon && iconPosition === "left" ? "pl-6 xs:pl-8 sm:pl-10" : icon ? "pr-6 xs:pr-8 sm:pr-10" : ""
-  } border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[--primary-color] active:border-[--primary-color] disabled:bg-gray-100 disabled:cursor-not-allowed ${
+  } border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[--active-menu-hover] active:border-[--active-menu-hover] disabled:bg-gray-100 disabled:cursor-not-allowed ${
     isTextarea ? "min-h-[60px] xs:min-h-[80px] sm:min-h-[100px]" : ""
   } ${resize ? "resize-y" : "resize-none"}`;
 
