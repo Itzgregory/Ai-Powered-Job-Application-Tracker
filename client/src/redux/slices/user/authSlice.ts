@@ -1,5 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { User, AuthState } from "@/types/user/auth.type";
+import { AuthState } from "@/types/user/auth.type";
+import { User } from "@/types/user/user.types";
 import { setAuthToken, clearAuthData, getAuthToken } from "@/utils/auth/authutils";
 
 interface ExtendedAuthState extends AuthState {

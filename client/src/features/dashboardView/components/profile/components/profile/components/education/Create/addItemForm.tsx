@@ -1,11 +1,8 @@
 import { useState, useEffect } from "react";
 import { FormConfig, FormPayload } from "../../../types/formField";
-import { AddItemFormContext } from "./addItemContext";
-import { AddItemFormField } from "./addItemFormField";
-import { AddItemFormRoleType } from "./addItemFormRoleTypes";
-import { AddItemFormSalesFields } from "./additemFormSalesField";
-import { AddItemFormTechnicalSkills } from "./addItemsTechnicalSkills";
-import { AddItemFormActions } from "./addItemFormAction";
+import { AddItemFormContext } from "../../workExperience/Create/addItemContext";
+import { AddItemFormField } from "../../workExperience/Create/addItemFormField";
+import { AddItemFormActions } from "../../workExperience/Create/addItemFormAction";
 
 interface AddItemFormProps {
   formConfig: FormConfig;
@@ -18,16 +15,13 @@ interface AddItemFormProps {
 }
 
 export const AddItemForm: React.FC<AddItemFormProps> & {
-  RoleType: typeof AddItemFormRoleType;
   Field: typeof AddItemFormField;
-  SalesFields: typeof AddItemFormSalesFields;
-  TechnicalSkills: typeof AddItemFormTechnicalSkills;
   Actions: typeof AddItemFormActions;
 } = ({
   formConfig,
   value = {},
   onChange,
-  alignButtons = "right",
+  alignButtons = "left",
   onCancel,
   onSave,
   className = "",
@@ -52,20 +46,10 @@ export const AddItemForm: React.FC<AddItemFormProps> & {
     ].filter(Boolean);
 
     return allFields.every((field) => {
-      if (
-        field?.conditional &&
-        formState[field.conditional.key as keyof FormPayload] !== field.conditional.value
-      ) {
-        return true;
-      }
 
       if (!field?.required) return true;
 
       const fieldValue = field ? formState[field.key as keyof FormPayload] : undefined;
-
-      if (field.key === "endDate" && formState.isStillEmployed === true) {
-        return true;
-      }
 
       if (fieldValue === undefined || fieldValue === "" || (Array.isArray(fieldValue) && fieldValue.length === 0)) {
         return false;
@@ -81,17 +65,11 @@ export const AddItemForm: React.FC<AddItemFormProps> & {
         {formConfig.fields?.map((field) => (
           <AddItemFormField key={field.key} field={field} />
         ))}
-        <AddItemFormRoleType />
-        <AddItemFormSalesFields />
-        <AddItemFormTechnicalSkills />
         <AddItemFormActions alignButtons={alignButtons} onCancel={onCancel} onSave={onSave} />
       </div>
     </AddItemFormContext.Provider>
   );
 };
 
-AddItemForm.RoleType = AddItemFormRoleType;
 AddItemForm.Field = AddItemFormField;
-AddItemForm.SalesFields = AddItemFormSalesFields;
-AddItemForm.TechnicalSkills = AddItemFormTechnicalSkills;
 AddItemForm.Actions = AddItemFormActions;

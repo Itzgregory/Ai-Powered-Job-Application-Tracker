@@ -3,7 +3,7 @@ import { FormPayload } from "../../../types/formField";
 
 interface Experience {
   id: string;
-  roleType: string;
+  roleType?: string;
   employer: string; 
   title: string;
   startDate: string;

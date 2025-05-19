@@ -3,6 +3,7 @@ import {Aboutmain} from "./about/aboutMain"
 import {Socialsmain} from "./socials/socialsMain"
 import {Educationmain} from "./education/educationMain"
 import {Workmain} from "./workExperience/workExperienceMain"
+import {Skillmain} from "./skills/SkilllMain"
 
 export function ProfileWrapper() {
   return (
@@ -13,6 +14,7 @@ export function ProfileWrapper() {
           <Socialsmain/>
           <Workmain/>
           <Educationmain/>
+          <Skillmain/>
         </div>
       </div>
     </header>

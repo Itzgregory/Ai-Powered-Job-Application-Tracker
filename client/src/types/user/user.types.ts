@@ -11,3 +11,5 @@ export interface User {
   }
   
   export type JobStatus = 'ready' | 'open' | 'closed';
+
+
